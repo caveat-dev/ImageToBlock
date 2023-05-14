@@ -1,0 +1,12 @@
+name: ImageToBlock
+version: 1.0.0
+main: dev.caveatemptor.imagetoblock.ImageToBlock
+api-version: 1.19
+
+commands:
+  image:
+    description: Hello World!
+    usage: /image
+    permission: op
+
+author: caveat
