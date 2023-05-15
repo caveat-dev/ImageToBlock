@@ -9,8 +9,11 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 import static org.codehaus.plexus.util.TypeFormat.parseInt;
@@ -23,7 +26,37 @@ public class Image implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        BufferedImage img = getImage();
+        File dir = new File("D:\\MC\\MinecraftBlockColors\\src\\culledBlocks");
+        File[] directoryListing = dir.listFiles();
+        BufferedImage img = null;
+
+        for (File file : directoryListing) {
+            String path = file.getAbsolutePath();
+
+            try {
+                img = ImageIO.read(new File(path));
+            } catch (IOException ignored) {}
+
+            int averageRed = 0;
+            int averageGreen = 0;
+            int averageBlue = 0;
+            int totalPixels = 0;
+            for (int y = 0; y < img.getHeight(); y++) {
+                for (int x = 1; x < img.getWidth(); x++) {
+                    Color colorAtPixel = new Color(img.getRGB(x, y));
+
+                    averageRed += colorAtPixel.getRed();
+                    averageGreen += colorAtPixel.getGreen();
+                    averageBlue += colorAtPixel.getBlue();
+
+                    totalPixels++;
+                }
+            }
+            Color averageColor = new Color(averageRed / totalPixels, averageGreen / totalPixels, averageBlue / totalPixels);
+            System.out.println(file.getName() + ": " + averageColor);
+        }
+
+        /* BufferedImage img = getImage();
 
         int x = 0;
         int y = 0;
@@ -55,6 +88,7 @@ public class Image implements CommandExecutor {
             imgY++;
             imgX = 0;
         }
+        */
 
         return true;
     }
