@@ -8,5 +8,3 @@ commands:
     description: Hello World!
     usage: /image
     permission: op
-
-author: caveat

@@ -14,6 +14,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.codehaus.plexus.util.TypeFormat.parseInt;
@@ -53,8 +54,23 @@ public class Image implements CommandExecutor {
                 }
             }
             Color averageColor = new Color(averageRed / totalPixels, averageGreen / totalPixels, averageBlue / totalPixels);
-            System.out.println(file.getName() + ": " + averageColor);
+
+            List<Integer> averageColorList = new ArrayList<>();
+            averageColorList.add(averageColor.getRed());
+            averageColorList.add(averageColor.getGreen());
+            averageColorList.add(averageColor.getBlue());
+
+            String fileName = file.getName();
+            fileName = fileName.replace("side", "");
+            fileName = fileName.replace(".png", "");
+            fileName = fileName.toUpperCase();
+
+            plugin.getConfig().getConfigurationSection("blocks").set(fileName, averageColorList);
+            plugin.saveConfig();
+
+            System.out.println(file + ": " + averageColor);
         }
+
 
         /* BufferedImage img = getImage();
 
