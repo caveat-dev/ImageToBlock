@@ -308,257 +308,257 @@ blocks:
     g: 126
     b: 122
   CRACKED_DEEPSLATE_BRICKS:
-    - 63
-    - 63
-    - 64
+    r: 63
+    g: 63
+    b:g: 64
   CRACKED_DEEPSLATE_TILES:
-    - 52
-    - 52
-    - 52
+    r: 52
+    g: 52
+    b:g: 52
   CRACKED_NETHER_BRICKS:
-    - 40
-    - 20
-    - 23
+    r: 40
+    g: 20
+    b:g: 23
   CRACKED_POLISHED_BLACKSTONE_BRICKS:
-    - 44
-    - 37
-    - 44
+    r: 44
+    g: 37
+    b:g: 44
   CRAFTING_TABLE:
-    - 135
-    - 108
-    - 66
+    r: 135
+    g: 108
+    b:g: 66
   CRIMSON_STEM:
-    - 92
-    - 25
-    - 30
+    r: 92
+    g: 25
+    b:g: 30
   CRIMSON_NYLIUM:
-    - 107
-    - 27
-    - 26
+    r: 107
+    g: 27
+    b: 26
   CRIMSON_PLANKS:
-    - 100
-    - 48
-    - 70
+    r: 100
+    g: 48
+    b: 70
   CRYING_OBSIDIAN:
-    - 33
-    - 10
-    - 61
+    r: 33
+    g: 10
+    b: 61
   CUT_COPPER:
-    - 189
-    - 105
-    - 79
+    r: 189
+    g: 105
+    b: 79
   DEEPSLATE:
-    - 79
-    - 79
-    - 81
+    r: 79
+    g: 79
+    b: 81
   DEEPSLATE_COAL_ORE:
-    - 73
-    - 73
-    - 74
+    r: 73
+    g: 73
+    b: 74
   DEEPSLATE_COPPER_ORE:
-    - 92
-    - 93
-    - 88
+    r: 92
+    g: 93
+    b: 88
   DEEPSLATE_DIAMOND_ORE:
-    - 82
-    - 107
-    - 107
+    r: 82
+    g: 107
+    b: 107
   DEEPSLATE_EMERALD_ORE:
-    - 77
-    - 105
-    - 87
+    r: 77
+    g: 105
+    b: 87
   DEEPSLATE_GOLD_ORE:
-    - 116
-    - 103
-    - 77
+    r: 116
+    g: 103
+    b: 77
   DEEPSLATE_IRON_ORE:
-    - 107
-    - 100
-    - 94
+    r: 107
+    g: 100
+    b: 94
   DEEPSLATE_LAPIS_ORE:
-    - 79
-    - 90
-    - 116
+    r: 79
+    g: 90
+    b: 116
   DEEPSLATE_REDSTONE_ORE:
-    - 105
-    - 72
-    - 73
+    r: 105
+    g: 72
+    b: 73
   DEEPSLATE_TILES:
-    - 55
-    - 54
-    - 55
+    r: 55
+    g: 54
+    b: 55
   DIAMOND_BLOCK:
-    - 100
-    - 237
-    - 228
+    r: 100
+    g: 237
+    b: 228
   DIAMOND_ORE:
-    - 120
-    - 142
-    - 141
+    r: 120
+    g: 142
+    b: 141
   DIRT:
-    - 133
-    - 95
-    - 66
+    r: 133
+    g: 95
+    b: 66
   PODZOL:
-    - 122
-    - 87
-    - 56
+    r: 122
+    g: 87
+    b: 56
   DRIED_KELP_BLOCK:
-    - 38
-    - 49
-    - 29
+    r: 38
+    g: 49
+    b: 29
   DRIPSTONE_BLOCK:
-    - 134
-    - 108
-    - 92
+    r: 134
+    g: 108
+    b: 92
   EMERALD_BLOCK:
-    - 43
-    - 203
-    - 89
+    r: 43
+    g: 203
+    b: 89
   EMERALD_ORE:
-    - 107
-    - 137
-    - 115
+    r: 107
+    g: 137
+    b: 115
   ENCHANTING_TABLE:
-    - 36
-    - 32
-    - 41
+    r: 36
+    g: 32
+    b: 41
   ENDER_CHEST:
-    - 17
-    - 30
-    - 34
+    r: 17
+    g: 30
+    b: 34
   END_PORTAL_FRAME:
-    - 122
-    - 131
-    - 99
+    r: 122
+    g: 131
+    b: 99
   END_STONE_BRICKS:
-    - 218
-    - 224
-    - 162
+    r: 218
+    g: 224
+    b: 162
   END_STONE:
-    - 219
-    - 223
-    - 158
+    r: 219
+    g: 223
+    b: 158
   EXPOSED_COPPER:
-    - 158
-    - 124
-    - 102
+    r: 158
+    g: 124
+    b: 102
   EXPOSED_CUT_COPPER:
-    - 152
-    - 120
-    - 100
+    r: 152
+    g: 120
+    b: 100
   FROSTED_ICE:
-    - 140
-    - 181
-    - 252
+    r: 140
+    g: 181
+    b: 252
   FURNACE:
-    - 123
-    - 123
-    - 123
+    r: 123
+    g: 123
+    b: 123
   GILDED_BLACKSTONE:
-    - 55
-    - 43
-    - 38
+    r: 55
+    g: 43
+    b: 38
   GLASS:
-    - 136
-    - 144
-    - 145
+    r: 136
+    g: 144
+    b: 145
   BLACK_STAINED_GLASS:
-    - 25
-    - 25
-    - 25
+    r: 25
+    g: 25
+    b: 25
   BLUE_STAINED_GLASS:
-    - 51
-    - 76
-    - 178
+    r: 51
+    g: 76
+    b: 178
   BROWN_STAINED_GLASS:
-    - 102
-    - 76
-    - 51
+    r: 102
+    g: 76
+    b: 51
   CYAN_STAINED_GLASS:
-    - 76
-    - 127
-    - 153
+    r: 76
+    g: 127
+    b: 153
   GRAY_STAINED_GLASS:
-    - 76
-    - 76
-    - 76
+    r: 76
+    g: 76
+    b: 76
   GREEN_STAINED_GLASS:
-    - 102
-    - 127
-    - 51
+    r: 102
+    g: 127
+    b: 51
   LIGHT_BLUE_STAINED_GLASS:
-    - 102
-    - 153
-    - 216
+    r: 102
+    g: 153
+    b: 216
   LIME_STAINED_GLASS:
-    - 127
-    - 204
-    - 25
+    r: 127
+    g: 204
+    b: 25
   MAGENTA_STAINED_GLASS:
-    - 178
-    - 76
-    - 216
+    r: 178
+    g: 76
+    b: 216
   ORANGE_STAINED_GLASS:
-    - 216
-    - 127
-    - 51
+    r: 216
+    g: 127
+    b: 51
   PINK_STAINED_GLASS:
-    - 242
-    - 127
-    - 165
+    r: 242
+    g: 127
+    b: 165
   PURPLE_STAINED_GLASS:
-    - 127
-    - 63
-    - 178
+    r: 127
+    g: 63
+    b: 178
   RED_STAINED_GLASS:
-    - 153
-    - 51
-    - 51
+    r: 153
+    g: 51
+    b: 51
   LIGHT_GRAY_STAINED_GLASS:
-    - 153
-    - 153
-    - 153
+    r: 153
+    g: 153
+    b: 153
   WHITE_STAINED_GLASS:
-    - 255
-    - 255
-    - 255
+    r: 255
+    g: 255
+    b: 255
   YELLOW_STAINED_GLASS:
-    - 229
-    - 229
-    - 51
+    r: 229
+    g: 229
+    b: 51
   BLACK_GLAZED_TERRACOTTA:
-    - 68
-    - 30
-    - 32
+    r: 68
+    g: 30
+    b: 32
   BLUE_GLAZED_TERRACOTTA:
-    - 47
-    - 65
-    - 140
+    r: 47
+    g: 65
+    b: 140
   BROWN_GLAZED_TERRACOTTA:
-    - 120
-    - 106
-    - 85
+    r: 120
+    g: 106
+    b: 85
   CYAN_GLAZED_TERRACOTTA:
-    - 51
-    - 117
-    - 124
+    r: 51
+    g: 117
+    b: 124
   GRAY_GLAZED_TERRACOTTA:
-    - 83
-    - 90
-    - 93
+    r: 83
+    g: 90
+    b: 93
   GREEN_GLAZED_TERRACOTTA:
-    - 115
-    - 140
-    - 64
+    r: 115
+    g: 140
+    b: 64
   LIGHT_BLUE_GLAZED_TERRACOTTA:
-    - 96
-    - 166
-    - 209
+    r: 96
+    g: 166
+    b: 209
   LIME_GLAZED_TERRACOTTA:
-    - 165
-    - 198
-    - 55
+    r: 165
+    g: 198
+    b: 55
   MAGENTA_GLAZED_TERRACOTTA:
     - 208
     - 100
