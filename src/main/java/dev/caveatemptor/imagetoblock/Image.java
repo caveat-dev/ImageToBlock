@@ -1,37 +1,39 @@
 package dev.caveatemptor.imagetoblock;
 
 import net.kyori.adventure.text.Component;
-import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.block.Block;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Map;
 
-import static org.codehaus.plexus.util.TypeFormat.parseInt;
 import static org.bukkit.Material.*;
-
-import static dev.caveatemptor.imagetoblock.LoadImageFromURL.*;
 
 public class Image implements CommandExecutor {
     ImageToBlock plugin = ImageToBlock.getInstance();
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        File dir = new File("D:\\MC\\MinecraftBlockColors\\src\\culledBlocks");
-        File[] directoryListing = dir.listFiles();
-        BufferedImage img = null;
+        // File dir = new File("D:\\MC\\MinecraftBlockColors\\src\\culledBlocks");
+        // [] directoryListing = dir.listFiles();
+        // BufferedImage img = null;
 
-        for (File file : directoryListing) {
+        Map<String, Object> blocks = plugin.getConfig().getConfigurationSection("blocks").getValues(false);
+        for (Map.Entry<String, Object> entry : blocks.entrySet()) {
+            boolean validEntry = false;
+            for (Material material : Material.values()) {
+                String materialName = material.getKey().toString().replace("minecraft:", "").toUpperCase();
+                if (entry.getKey().equals(materialName))
+                    validEntry = true;
+            }
+            if (!validEntry)
+                sender.sendMessage(Component.text(entry.getKey()));
+        }
+        FIRE_CORAL_BLOCK
+
+         /*for (File file : directoryListing) {
             String path = file.getAbsolutePath();
 
             try {
@@ -69,7 +71,7 @@ public class Image implements CommandExecutor {
             plugin.saveConfig();
 
             System.out.println(file + ": " + averageColor);
-        }
+        } */
 
         /* BufferedImage img = getImage();
 

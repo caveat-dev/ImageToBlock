@@ -123,14 +123,10 @@ blocks:
     - 128
     - 127
     - 128
-  COBBLESTONE_MOSSY:
+  MOSSY_COBBLESTONE:
     - 109
     - 118
     - 94
-  COMPOST:
-    - 82
-    - 56
-    - 23
   COMPOSTER:
     - 112
     - 70
@@ -295,19 +291,19 @@ blocks:
     - 132
     - 123
     - 119
-  RED_CORAL_BLOCK:
+  FIRE_CORAL_BLOCK:
     - 162
     - 35
     - 48
-  DEAD_RED_CORAL_BLOCK:
+  DEAD_FIRE_CORAL_BLOCK:
     - 131
     - 123
     - 119
-  YELLOW_CORAL_BLOCK:
+  HORN_CORAL_BLOCK:
     - 216
     - 200
     - 66
-  DEAD_YELLOW_CORAL_BLOCK:
+  DEAD_HORN_CORAL_BLOCK:
     - 133
     - 126
     - 122
@@ -747,7 +743,7 @@ blocks:
     - 115
     - 3
     - 2
-  NOTEBLOCK:
+  NOTE_BLOCK:
     - 91
     - 60
     - 41
@@ -859,7 +855,7 @@ blocks:
     - 234
     - 228
     - 221
-  QUARTZ_ORE:
+  QUARTZ:
     - 119
     - 67
     - 64
