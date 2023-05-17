@@ -71,7 +71,6 @@ public class Image implements CommandExecutor {
             System.out.println(file + ": " + averageColor);
         }
 
-
         /* BufferedImage img = getImage();
 
         int x = 0;

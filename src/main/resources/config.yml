@@ -1,1 +1,1149 @@
-blocks: {}
+blocks:
+  AMETHYST_BLOCK:
+    - 134
+    - 98
+    - 192
+  AMETHYST_CLUSTER:
+    - 91
+    - 71
+    - 116
+  ANCIENT_DEBRIS:
+    - 96
+    - 64
+    - 56
+  ANVIL:
+    - 69
+    - 69
+    - 69
+  AZALEA_LEAVES:
+    - 69
+    - 87
+    - 33
+  FLOWERING_AZALEA_LEAVES:
+    - 80
+    - 88
+    - 49
+  AZALEA:
+    - 57
+    - 72
+    - 27
+  BARREL:
+    - 107
+    - 80
+    - 49
+  BASALT:
+    - 74
+    - 73
+    - 78
+  BEACON:
+    - 108
+    - 218
+    - 212
+  BEEHIVE:
+    - 159
+    - 128
+    - 77
+  BEE_NEST:
+    - 196
+    - 151
+    - 77
+  BLACKSTONE:
+    - 42
+    - 35
+    - 40
+  BLAST_FURNACE:
+    - 107
+    - 106
+    - 106
+  BLUE_ICE:
+    - 116
+    - 168
+    - 253
+  BONE_BLOCK:
+    - 229
+    - 226
+    - 208
+  BOOKSHELF:
+    - 113
+    - 91
+    - 58
+  BRICK:
+    - 151
+    - 98
+    - 83
+  BUDDING_AMETHYST:
+    - 133
+    - 96
+    - 187
+  CALCITE:
+    - 223
+    - 224
+    - 220
+  CAULDRON:
+    - 74
+    - 73
+    - 74
+  CHEST:
+    - 126
+    - 91
+    - 37
+  CHISELED_DEEPSLATE:
+    - 54
+    - 54
+    - 55
+  CHISELED_NETHER_BRICKS:
+    - 46
+    - 23
+    - 27
+  CHISELED_POLISHED_BLACKSTONE:
+    - 52
+    - 47
+    - 55
+  CLAY:
+    - 160
+    - 166
+    - 179
+  COAL_BLOCK:
+    - 16
+    - 16
+    - 16
+  COAL_ORE:
+    - 104
+    - 104
+    - 103
+  COARSE_DIRT:
+    - 118
+    - 84
+    - 58
+  COBBLED_DEEPSLATE:
+    - 76
+    - 76
+    - 80
+  COBBLESTONE:
+    - 128
+    - 127
+    - 128
+  COBBLESTONE_MOSSY:
+    - 109
+    - 118
+    - 94
+  COMPOST:
+    - 82
+    - 56
+    - 23
+  COMPOSTER:
+    - 112
+    - 70
+    - 32
+  BLACK_CONCRETE:
+    - 8
+    - 10
+    - 15
+  BLUE_CONCRETE:
+    - 44
+    - 46
+    - 143
+  BROWN_CONCRETE:
+    - 96
+    - 59
+    - 31
+  CYAN_CONCRETE:
+    - 21
+    - 119
+    - 136
+  GRAY_CONCRETE:
+    - 54
+    - 57
+    - 61
+  GREEN_CONCRETE:
+    - 73
+    - 91
+    - 36
+  LIGHT_BLUE_CONCRETE:
+    - 35
+    - 137
+    - 198
+  LIME_CONCRETE:
+    - 94
+    - 168
+    - 24
+  MAGENTA_CONCRETE:
+    - 169
+    - 48
+    - 159
+  ORANGE_CONCRETE:
+    - 224
+    - 97
+    - 0
+  PINK_CONCRETE:
+    - 213
+    - 101
+    - 142
+  BLACK_CONCRETE_POWDER:
+    - 25
+    - 26
+    - 32
+  BLUE_CONCRETE_POWDER:
+    - 70
+    - 73
+    - 166
+  BROWN_CONCRETE_POWDER:
+    - 125
+    - 84
+    - 53
+  CYAN_CONCRETE_POWDER:
+    - 36
+    - 148
+    - 157
+  GRAY_CONCRETE_POWDER:
+    - 76
+    - 81
+    - 84
+  GREEN_CONCRETE_POWDER:
+    - 97
+    - 119
+    - 44
+  LIGHT_BLUE_CONCRETE_POWDER:
+    - 74
+    - 181
+    - 213
+  LIME_CONCRETE_POWDER:
+    - 125
+    - 189
+    - 41
+  MAGENTA_CONCRETE_POWDER:
+    - 192
+    - 83
+    - 184
+  ORANGE_CONCRETE_POWDER:
+    - 227
+    - 132
+    - 31
+  PINK_CONCRETE_POWDER:
+    - 229
+    - 153
+    - 181
+  PURPLE_CONCRETE_POWDER:
+    - 132
+    - 55
+    - 177
+  RED_CONCRETE_POWDER:
+    - 168
+    - 54
+    - 50
+  LIGHT_GRAY_CONCRETE_POWDER:
+    - 155
+    - 155
+    - 148
+  WHITE_CONCRETE_POWDER:
+    - 225
+    - 227
+    - 227
+  YELLOW_CONCRETE_POWDER:
+    - 233
+    - 199
+    - 54
+  PURPLE_CONCRETE:
+    - 100
+    - 31
+    - 156
+  RED_CONCRETE:
+    - 142
+    - 32
+    - 32
+  LIGHT_GRAY_CONCRETE:
+    - 125
+    - 125
+    - 115
+  WHITE_CONCRETE:
+    - 207
+    - 213
+    - 214
+  YELLOW_CONCRETE:
+    - 240
+    - 175
+    - 21
+  COPPER_BLOCK:
+    - 190
+    - 106
+    - 78
+  COPPER_ORE:
+    - 124
+    - 125
+    - 119
+  TUBE_CORAL_BLOCK:
+    - 48
+    - 87
+    - 206
+  DEAD_TUBE_CORAL_BLOCK:
+    - 130
+    - 123
+    - 119
+  BRAIN_CORAL_BLOCK:
+    - 207
+    - 90
+    - 159
+  DEAD_BRAIN_CORAL_BLOCK:
+    - 123
+    - 117
+    - 113
+  BUBBLE_CORAL_BLOCK:
+    - 184
+    - 33
+    - 180
+  DEAD_BUBBLE_CORAL_BLOCK:
+    - 132
+    - 123
+    - 119
+  RED_CORAL_BLOCK:
+    - 162
+    - 35
+    - 48
+  DEAD_RED_CORAL_BLOCK:
+    - 131
+    - 123
+    - 119
+  YELLOW_CORAL_BLOCK:
+    - 216
+    - 200
+    - 66
+  DEAD_YELLOW_CORAL_BLOCK:
+    - 133
+    - 126
+    - 122
+  CRACKED_DEEPSLATE_BRICKS:
+    - 63
+    - 63
+    - 64
+  CRACKED_DEEPSLATE_TILES:
+    - 52
+    - 52
+    - 52
+  CRACKED_NETHER_BRICKS:
+    - 40
+    - 20
+    - 23
+  CRACKED_POLISHED_BLACKSTONE_BRICKS:
+    - 44
+    - 37
+    - 44
+  CRAFTING_TABLE:
+    - 135
+    - 108
+    - 66
+  CRIMSON_STEM:
+    - 92
+    - 25
+    - 30
+  CRIMSON_NYLIUM:
+    - 107
+    - 27
+    - 26
+  CRIMSON_PLANKS:
+    - 100
+    - 48
+    - 70
+  CRYING_OBSIDIAN:
+    - 33
+    - 10
+    - 61
+  CUT_COPPER:
+    - 189
+    - 105
+    - 79
+  DEEPSLATE:
+    - 79
+    - 79
+    - 81
+  DEEPSLATE_COAL_ORE:
+    - 73
+    - 73
+    - 74
+  DEEPSLATE_COPPER_ORE:
+    - 92
+    - 93
+    - 88
+  DEEPSLATE_DIAMOND_ORE:
+    - 82
+    - 107
+    - 107
+  DEEPSLATE_EMERALD_ORE:
+    - 77
+    - 105
+    - 87
+  DEEPSLATE_GOLD_ORE:
+    - 116
+    - 103
+    - 77
+  DEEPSLATE_IRON_ORE:
+    - 107
+    - 100
+    - 94
+  DEEPSLATE_LAPIS_ORE:
+    - 79
+    - 90
+    - 116
+  DEEPSLATE_REDSTONE_ORE:
+    - 105
+    - 72
+    - 73
+  DEEPSLATE_TILES:
+    - 55
+    - 54
+    - 55
+  DIAMOND_BLOCK:
+    - 100
+    - 237
+    - 228
+  DIAMOND_ORE:
+    - 120
+    - 142
+    - 141
+  DIRT:
+    - 133
+    - 95
+    - 66
+  PODZOL:
+    - 122
+    - 87
+    - 56
+  DRIED_KELP_BLOCK:
+    - 38
+    - 49
+    - 29
+  DRIPSTONE_BLOCK:
+    - 134
+    - 108
+    - 92
+  EMERALD_BLOCK:
+    - 43
+    - 203
+    - 89
+  EMERALD_ORE:
+    - 107
+    - 137
+    - 115
+  ENCHANTING_TABLE:
+    - 36
+    - 32
+    - 41
+  ENDER_CHEST:
+    - 17
+    - 30
+    - 34
+  END_PORTAL_FRAME:
+    - 122
+    - 131
+    - 99
+  END_STONE_BRICKS:
+    - 218
+    - 224
+    - 162
+  END_STONE:
+    - 219
+    - 223
+    - 158
+  EXPOSED_COPPER:
+    - 158
+    - 124
+    - 102
+  EXPOSED_CUT_COPPER:
+    - 152
+    - 120
+    - 100
+  FROSTED_ICE:
+    - 140
+    - 181
+    - 252
+  FURNACE:
+    - 123
+    - 123
+    - 123
+  GILDED_BLACKSTONE:
+    - 55
+    - 43
+    - 38
+  GLASS:
+    - 136
+    - 144
+    - 145
+  BLACK_STAINED_GLASS:
+    - 25
+    - 25
+    - 25
+  BLUE_STAINED_GLASS:
+    - 51
+    - 76
+    - 178
+  BROWN_STAINED_GLASS:
+    - 102
+    - 76
+    - 51
+  CYAN_STAINED_GLASS:
+    - 76
+    - 127
+    - 153
+  GRAY_STAINED_GLASS:
+    - 76
+    - 76
+    - 76
+  GREEN_STAINED_GLASS:
+    - 102
+    - 127
+    - 51
+  LIGHT_BLUE_STAINED_GLASS:
+    - 102
+    - 153
+    - 216
+  LIME_STAINED_GLASS:
+    - 127
+    - 204
+    - 25
+  MAGENTA_STAINED_GLASS:
+    - 178
+    - 76
+    - 216
+  ORANGE_STAINED_GLASS:
+    - 216
+    - 127
+    - 51
+  PINK_STAINED_GLASS:
+    - 242
+    - 127
+    - 165
+  PURPLE_STAINED_GLASS:
+    - 127
+    - 63
+    - 178
+  RED_STAINED_GLASS:
+    - 153
+    - 51
+    - 51
+  SILVER_STAINED_GLASS:
+    - 153
+    - 153
+    - 153
+  WHITE_STAINED_GLASS:
+    - 255
+    - 255
+    - 255
+  YELLOW_STAINED_GLASS:
+    - 229
+    - 229
+    - 51
+  BLACK_GLAZED_TERRACOTTA:
+    - 68
+    - 30
+    - 32
+  BLUE_GLAZED_TERRACOTTA:
+    - 47
+    - 65
+    - 140
+  BROWN_GLAZED_TERRACOTTA:
+    - 120
+    - 106
+    - 85
+  CYAN_GLAZED_TERRACOTTA:
+    - 51
+    - 117
+    - 124
+  GRAY_GLAZED_TERRACOTTA:
+    - 83
+    - 90
+    - 93
+  GREEN_GLAZED_TERRACOTTA:
+    - 115
+    - 140
+    - 64
+  LIGHT_BLUE_GLAZED_TERRACOTTA:
+    - 96
+    - 166
+    - 209
+  LIME_GLAZED_TERRACOTTA:
+    - 165
+    - 198
+    - 55
+  MAGENTA_GLAZED_TERRACOTTA:
+    - 208
+    - 100
+    - 192
+  ORANGE_GLAZED_TERRACOTTA:
+    - 154
+    - 145
+    - 89
+  PINK_GLAZED_TERRACOTTA:
+    - 235
+    - 155
+    - 182
+  PURPLE_GLAZED_TERRACOTTA:
+    - 110
+    - 47
+    - 153
+  RED_GLAZED_TERRACOTTA:
+    - 182
+    - 59
+    - 53
+  LIGHT_GRAY_GLAZED_TERRACOTTA:
+    - 143
+    - 166
+    - 168
+  WHITE_GLAZED_TERRACOTTA:
+    - 186
+    - 212
+    - 206
+  YELLOW_GLAZED_TERRACOTTA:
+    - 234
+    - 191
+    - 87
+  GLOWSTONE:
+    - 171
+    - 130
+    - 84
+  GOLD_BLOCK:
+    - 246
+    - 209
+    - 63
+  GOLD_ORE:
+    - 146
+    - 134
+    - 105
+  GRAVEL:
+    - 132
+    - 127
+    - 126
+  HAY_BLOCK:
+    - 167
+    - 137
+    - 38
+  HONEYCOMB_BLOCK:
+    - 229
+    - 148
+    - 30
+  HONEY_BLOCK:
+    - 250
+    - 188
+    - 57
+  ICE:
+    - 145
+    - 183
+    - 253
+  PACKED_ICE:
+    - 141
+    - 180
+    - 250
+  IRON_BARS:
+    - 65
+    - 66
+    - 64
+  IRON_BLOCK:
+    - 222
+    - 222
+    - 222
+  IRON_ORE:
+    - 136
+    - 129
+    - 122
+  JUKEBOX:
+    - 91
+    - 60
+    - 41
+  LAPIS_BLOCK:
+    - 30
+    - 66
+    - 138
+  LAPIS_ORE:
+    - 105
+    - 117
+    - 142
+  LODESTONE:
+    - 118
+    - 118
+    - 121
+  ACACIA_LOG:
+    - 102
+    - 95
+    - 86
+  BIRCH_LOG:
+    - 218
+    - 216
+    - 211
+  JUNGLE_LOG:
+    - 85
+    - 67
+    - 25
+  OAK_LOG:
+    - 107
+    - 84
+    - 50
+  SPRUCE_LOG:
+    - 58
+    - 37
+    - 16
+  LOOM:
+    - 143
+    - 98
+    - 71
+  MAGMA_BLOCK:
+    - 141
+    - 62
+    - 31
+  MANGROVE_LOG:
+    - 83
+    - 66
+    - 41
+  MANGROVE_PLANKS:
+    - 117
+    - 53
+    - 48
+  MANGROVE_ROOTS:
+    - 43
+    - 34
+    - 22
+  MELON:
+    - 114
+    - 145
+    - 30
+  SPAWNER:
+    - 24
+    - 32
+    - 43
+  MOSS_BLOCK:
+    - 89
+    - 110
+    - 45
+  MUD:
+    - 60
+    - 57
+    - 60
+  MUDDY_MANGROVE_ROOTS:
+    - 68
+    - 58
+    - 47
+  MUD_BRICKS:
+    - 137
+    - 104
+    - 79
+  MYCELIUM:
+    - 113
+    - 87
+    - 71
+  NETHERITE_BLOCK:
+    - 67
+    - 62
+    - 65
+  NETHERRACK:
+    - 97
+    - 38
+    - 38
+  NETHER_BRICK:
+    - 44
+    - 21
+    - 26
+  NETHER_GOLD_ORE:
+    - 116
+    - 56
+    - 42
+  NETHER_WART_BLOCK:
+    - 115
+    - 3
+    - 2
+  NOTEBLOCK:
+    - 91
+    - 60
+    - 41
+  OBSERVER:
+    - 71
+    - 69
+    - 69
+  OBSIDIAN:
+    - 15
+    - 10
+    - 25
+  OCHRE_FROGLIGHT:
+    - 246
+    - 235
+    - 184
+  OXIDIZED_COPPER:
+    - 80
+    - 160
+    - 131
+  OXIDIZED_CUT_COPPER:
+    - 78
+    - 151
+    - 125
+  PACKED_MUD:
+    - 142
+    - 106
+    - 79
+  PEARLESCENT_FROGLIGHT:
+    - 236
+    - 227
+    - 230
+  PISTON:
+    - 112
+    - 106
+    - 97
+  ACACIA_PLANKS:
+    - 167
+    - 90
+    - 50
+  BIRCH_PLANKS:
+    - 192
+    - 175
+    - 121
+  JUNGLE_PLANKS:
+    - 160
+    - 115
+    - 80
+  OAK_PLANKS:
+    - 162
+    - 130
+    - 78
+  SPRUCE_PLANKS:
+    - 114
+    - 84
+    - 48
+  POLISHED_BASALT:
+    - 91
+    - 90
+    - 93
+  POLISHED_BLACKSTONE:
+    - 52
+    - 47
+    - 55
+  POLISHED_BLACKSTONE_BRICKS:
+    - 48
+    - 42
+    - 49
+  POLISHED_DEEPSLATE:
+    - 70
+    - 70
+    - 71
+  POWDER_SNOW:
+    - 247
+    - 253
+    - 253
+  PRISMARINE_BRICKS:
+    - 97
+    - 170
+    - 157
+  DARK_PRISMARINE:
+    - 51
+    - 90
+    - 75
+  PRISMARINE:
+    - 99
+    - 156
+    - 151
+  PUMPKIN:
+    - 197
+    - 116
+    - 24
+  PURPUR_BLOCK:
+    - 168
+    - 124
+    - 168
+  PURPUR_PILLAR:
+    - 170
+    - 127
+    - 169
+  CHISELED_QUARTZ_BLOCK:
+    - 232
+    - 227
+    - 218
+  QUARTZ_BLOCK:
+    - 235
+    - 229
+    - 222
+  QUARTZ_BRICKS:
+    - 234
+    - 228
+    - 221
+  QUARTZ_ORE:
+    - 119
+    - 67
+    - 64
+  RAW_COPPER_BLOCK:
+    - 155
+    - 106
+    - 79
+  RAW_GOLD_BLOCK:
+    - 221
+    - 169
+    - 46
+  RAW_IRON_BLOCK:
+    - 166
+    - 136
+    - 107
+  REDSTONE_BLOCK:
+    - 171
+    - 24
+    - 4
+  REDSTONE_LAMP:
+    - 98
+    - 56
+    - 30
+  REDSTONE_ORE:
+    - 141
+    - 108
+    - 108
+  RED_NETHER_BRICK:
+    - 69
+    - 7
+    - 9
+  RED_SAND:
+    - 190
+    - 102
+    - 33
+  RED_SANDSTONE:
+    - 186
+    - 99
+    - 29
+  SMOOTH_RED_SANDSTONE:
+    - 188
+    - 101
+    - 31
+  RESPAWN_ANCHOR:
+    - 39
+    - 23
+    - 63
+  SAND:
+    - 219
+    - 207
+    - 163
+  SANDSTONE:
+    - 216
+    - 203
+    - 155
+  SMOOTH_SANDSTONE:
+    - 217
+    - 205
+    - 158
+  SEA_LANTERN:
+    - 178
+    - 204
+    - 194
+  SHROOMLIGHT:
+    - 241
+    - 149
+    - 74
+  SLIME_BLOCK:
+    - 111
+    - 191
+    - 91
+  SMITHING_TABLE:
+    - 56
+    - 34
+    - 35
+  SMOKER:
+    - 101
+    - 91
+    - 77
+  SMOOTH_BASALT:
+    - 72
+    - 72
+    - 78
+  SNOW:
+    - 248
+    - 254
+    - 254
+  SOUL_SAND:
+    - 81
+    - 62
+    - 50
+  SOUL_SOIL:
+    - 75
+    - 57
+    - 46
+  SPONGE:
+    - 196
+    - 192
+    - 74
+  WET_SPONGE:
+    - 170
+    - 180
+    - 70
+  STONE:
+    - 125
+    - 125
+    - 125
+  STONE_BRICKS:
+    - 121
+    - 121
+    - 121
+  CRACKED_STONE_BRICKS:
+    - 117
+    - 117
+    - 117
+  MOSSY_STONE_BRICK:
+    - 114
+    - 120
+    - 103
+  STONECUTTER:
+    - 125
+    - 126
+    - 125
+  ANDESITE:
+    - 136
+    - 136
+    - 136
+  POLISHED_ANDESITE:
+    - 129
+    - 132
+    - 131
+  DIORITE:
+    - 188
+    - 188
+    - 188
+  POLISHED_DIORITE:
+    - 191
+    - 191
+    - 192
+  GRANITE:
+    - 149
+    - 102
+    - 85
+  POLISHED_GRANITE:
+    - 151
+    - 104
+    - 86
+  STONE_SLAB:
+    - 165
+    - 165
+    - 165
+  STRIPPED_ACACIA_LOG:
+    - 175
+    - 93
+    - 60
+  STRIPPED_BIRCH_LOG:
+    - 198
+    - 177
+    - 119
+  STRIPPED_CRIMSON_STEM:
+    - 137
+    - 57
+    - 90
+  STRIPPED_DARK_OAK_LOG:
+    - 73
+    - 57
+    - 36
+  STRIPPED_JUNGLE_LOG:
+    - 171
+    - 133
+    - 84
+  STRIPPED_MANGROVE_LOG:
+    - 119
+    - 54
+    - 48
+  STRIPPED_OAK_LOG:
+    - 179
+    - 145
+    - 87
+  STRIPPED_SPRUCE_LOG:
+    - 80
+    - 61
+    - 34
+  STRIPPED_WARPED_STEM:
+    - 57
+    - 151
+    - 148
+  TARGET:
+    - 228
+    - 173
+    - 165
+  TNT:
+    - 179
+    - 86
+    - 82
+  TUFF:
+    - 107
+    - 108
+    - 102
+  WARPED_NYLIUM:
+    - 72
+    - 62
+    - 60
+  WARPED_PLANKS:
+    - 43
+    - 104
+    - 98
+  WARPED_STEM:
+    - 58
+    - 58
+    - 77
+  WARPED_WART_BLOCK:
+    - 22
+    - 120
+    - 121
+  WEATHERED_COPPER:
+    - 107
+    - 151
+    - 107
+  WEATHERED_CUT_COPPER:
+    - 109
+    - 143
+    - 105
+  BLACK_WOOL:
+    - 20
+    - 21
+    - 25
+  BLUE_WOOL:
+    - 53
+    - 57
+    - 157
+  BROWN_WOOL:
+    - 114
+    - 71
+    - 40
+  CYAN_WOOL:
+    - 21
+    - 137
+    - 145
+  GRAY_WOOL:
+    - 62
+    - 68
+    - 71
+  GREEN_WOOL:
+    - 84
+    - 109
+    - 27
+  LIGHT_BLUE_WOOL:
+    - 58
+    - 175
+    - 217
+  LIME_WOOL:
+    - 112
+    - 185
+    - 25
+  MAGENTA_WOOL:
+    - 189
+    - 68
+    - 179
+  ORANGE_WOOL:
+    - 240
+    - 118
+    - 19
+  PINK_WOOL:
+    - 237
+    - 141
+    - 172
+  PURPLE_WOOL:
+    - 121
+    - 42
+    - 172
+  RED_WOOL:
+    - 161
+    - 39
+    - 34
+  LIGHT_GRAY_WOOL:
+    - 142
+    - 142
+    - 134
+  WHITE_WOOL:
+    - 233
+    - 236
+    - 236
+  YELLOW:
+    - 248
+    - 198
+    - 39
