@@ -1,10 +1,14 @@
 package dev.caveatemptor.imagetoblock;
 
 import org.bukkit.Material;
+import org.bukkit.block.Block;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.ConfigurationSection;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -14,10 +18,12 @@ import java.util.List;
 
 import static dev.caveatemptor.imagetoblock.LoadImageFromURL.getImage;
 import static java.lang.Integer.parseInt;
+import static java.lang.Math.abs;
 import static org.bukkit.Material.*;
 
 public class Image implements CommandExecutor {
     ImageToBlock plugin = ImageToBlock.getInstance();
+    FileConfiguration config = plugin.getConfig();
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -62,9 +68,31 @@ public class Image implements CommandExecutor {
     }
 
     private Material getBlockClosestInColor(Color pixelColor) {
-        Map<String, Object> blockList = plugin.getConfig().getConfigurationSection("blocks").getValues(false);
-        Object[] blockListValues = blockList.values().toArray();
+        Map<String, Object> blockNames = config.getConfigurationSection("blocks").getValues(false);
 
-        return null;
+        float lowestAverageDifference = 999;
+        Material closestBlockInColor = null;
+
+        for (Material material : Material.values()) {
+
+            String materialName = material.key().toString().replace("minecraft:", "").toUpperCase();
+            if (!blockNames.containsKey(materialName))
+                continue;
+
+            Map<String, Object> blockColors = config.getConfigurationSection("blocks." + materialName).getValues(false);
+
+            int redDifference = abs((int) blockColors.get("r") - pixelColor.getRed());
+            int greenDifference = abs((int) blockColors.get("g") - pixelColor.getGreen());
+            int blueDifference = abs((int) blockColors.get("b") - pixelColor.getBlue());
+
+            float averageDifference = (redDifference + greenDifference + blueDifference) / 3.0f;
+
+            if (averageDifference < lowestAverageDifference) {
+                closestBlockInColor = material;
+                lowestAverageDifference = averageDifference;
+            }
+        }
+
+        return closestBlockInColor;
     }
 }

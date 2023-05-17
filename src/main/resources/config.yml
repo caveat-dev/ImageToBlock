@@ -1,312 +1,312 @@
 blocks:
   AMETHYST_BLOCK:
-    - 134
-    - 98
-    - 192
+    r: 134
+    g: 98
+    b: 192
   AMETHYST_CLUSTER:
-    - 91
-    - 71
-    - 116
+    r: 91
+    g: 71
+    b: 116
   ANCIENT_DEBRIS:
-    - 96
-    - 64
-    - 56
+    r: 96
+    g: 64
+    b: 56
   ANVIL:
-    - 69
-    - 69
-    - 69
+    r: 69
+    g: 69
+    b: 69
   AZALEA_LEAVES:
-    - 69
-    - 87
-    - 33
+    r: 69
+    g: 87
+    b: 33
   FLOWERING_AZALEA_LEAVES:
-    - 80
-    - 88
-    - 49
+    r: 80
+    g: 88
+    b: 49
   AZALEA:
-    - 57
-    - 72
-    - 27
+    r: 57
+    g: 72
+    b: 27
   BARREL:
-    - 107
-    - 80
-    - 49
+    r: 107
+    g: 80
+    b: 49
   BASALT:
-    - 74
-    - 73
-    - 78
+    r: 74
+    g: 73
+    b: 78
   BEACON:
-    - 108
-    - 218
-    - 212
+    r: 108
+    g: 218
+    b: 212
   BEEHIVE:
-    - 159
-    - 128
-    - 77
+    r: 159
+    g: 128
+    b: 77
   BEE_NEST:
-    - 196
-    - 151
-    - 77
+    r: 196
+    g: 151
+    b: 77
   BLACKSTONE:
-    - 42
-    - 35
-    - 40
+    r: 42
+    g: 35
+    b: 40
   BLAST_FURNACE:
-    - 107
-    - 106
-    - 106
+    r: 107
+    g: 106
+    b: 106
   BLUE_ICE:
-    - 116
-    - 168
-    - 253
+    r: 116
+    g: 168
+    b: 253
   BONE_BLOCK:
-    - 229
-    - 226
-    - 208
+    r: 229
+    g: 226
+    b: 208
   BOOKSHELF:
-    - 113
-    - 91
-    - 58
+    r: 113
+    g: 91
+    b: 58
   BRICK:
-    - 151
-    - 98
-    - 83
+    r: 151
+    g: 98
+    b: 83
   BUDDING_AMETHYST:
-    - 133
-    - 96
-    - 187
+    r: 133
+    g: 96
+    b: 187
   CALCITE:
-    - 223
-    - 224
-    - 220
+    r: 223
+    g: 224
+    b: 220
   CAULDRON:
-    - 74
-    - 73
-    - 74
+    r: 74
+    g: 73
+    b: 74
   CHEST:
-    - 126
-    - 91
-    - 37
+    r: 126
+    g: 91
+    b: 37
   CHISELED_DEEPSLATE:
-    - 54
-    - 54
-    - 55
+    r: 54
+    g: 54
+    b: 55
   CHISELED_NETHER_BRICKS:
-    - 46
-    - 23
-    - 27
+    r: 46
+    g: 23
+    b: 27
   CHISELED_POLISHED_BLACKSTONE:
-    - 52
-    - 47
-    - 55
+    r: 52
+    g: 47
+    b: 55
   CLAY:
-    - 160
-    - 166
-    - 179
+    r: 160
+    g: 166
+    b: 179
   COAL_BLOCK:
-    - 16
-    - 16
-    - 16
+    r: 16
+    g: 16
+    b: 16
   COAL_ORE:
-    - 104
-    - 104
-    - 103
+    r: 104
+    g: 104
+    b: 103
   COARSE_DIRT:
-    - 118
-    - 84
-    - 58
+    r: 118
+    g: 84
+    b: 58
   COBBLED_DEEPSLATE:
-    - 76
-    - 76
-    - 80
+    r: 76
+    g: 76
+    b: 80
   COBBLESTONE:
-    - 128
-    - 127
-    - 128
+    r: 128
+    g: 127
+    b: 128
   MOSSY_COBBLESTONE:
-    - 109
-    - 118
-    - 94
+    r: 109
+    g: 118
+    b: 94
   COMPOSTER:
-    - 112
-    - 70
-    - 32
+    r: 112
+    g: 70
+    b: 32
   BLACK_CONCRETE:
-    - 8
-    - 10
-    - 15
+    r: 8
+    g: 10
+    b: 15
   BLUE_CONCRETE:
-    - 44
-    - 46
-    - 143
+    r: 44
+    g: 46
+    b: 143
   BROWN_CONCRETE:
-    - 96
-    - 59
-    - 31
+    r: 96
+    g: 59
+    b: 31
   CYAN_CONCRETE:
-    - 21
-    - 119
-    - 136
+    r: 21
+    g: 119
+    b: 136
   GRAY_CONCRETE:
-    - 54
-    - 57
-    - 61
+    r: 54
+    g: 57
+    b: 61
   GREEN_CONCRETE:
-    - 73
-    - 91
-    - 36
+    r: 73
+    g: 91
+    b: 36
   LIGHT_BLUE_CONCRETE:
-    - 35
-    - 137
-    - 198
+    r: 35
+    g: 137
+    b: 198
   LIME_CONCRETE:
-    - 94
-    - 168
-    - 24
+    r: 94
+    g: 168
+    b: 24
   MAGENTA_CONCRETE:
-    - 169
-    - 48
-    - 159
+    r: 169
+    g: 48
+    b: 159
   ORANGE_CONCRETE:
-    - 224
-    - 97
-    - 0
+    r: 224
+    g: 97
+    b: 0
   PINK_CONCRETE:
-    - 213
-    - 101
-    - 142
+    r: 213
+    g: 101
+    b: 142
   BLACK_CONCRETE_POWDER:
-    - 25
-    - 26
-    - 32
+    r: 25
+    g: 26
+    b: 32
   BLUE_CONCRETE_POWDER:
-    - 70
-    - 73
-    - 166
+    r: 70
+    g: 73
+    b: 166
   BROWN_CONCRETE_POWDER:
-    - 125
-    - 84
-    - 53
+    r: 125
+    g: 84
+    b: 53
   CYAN_CONCRETE_POWDER:
-    - 36
-    - 148
-    - 157
+    r: 36
+    g: 148
+    b: 157
   GRAY_CONCRETE_POWDER:
-    - 76
-    - 81
-    - 84
+    r: 76
+    g: 81
+    b: 84
   GREEN_CONCRETE_POWDER:
-    - 97
-    - 119
-    - 44
+    r: 97
+    g: 119
+    b: 44
   LIGHT_BLUE_CONCRETE_POWDER:
-    - 74
-    - 181
-    - 213
+    r: 74
+    g: 181
+    b: 213
   LIME_CONCRETE_POWDER:
-    - 125
-    - 189
-    - 41
+    r: 125
+    g: 189
+    b: 41
   MAGENTA_CONCRETE_POWDER:
-    - 192
-    - 83
-    - 184
+    r: 192
+    g: 83
+    b: 184
   ORANGE_CONCRETE_POWDER:
-    - 227
-    - 132
-    - 31
+    r: 227
+    g: 132
+    b: 31
   PINK_CONCRETE_POWDER:
-    - 229
-    - 153
-    - 181
+    r: 229
+    g: 153
+    b: 181
   PURPLE_CONCRETE_POWDER:
-    - 132
-    - 55
-    - 177
+    r: 132
+    g: 55
+    b: 177
   RED_CONCRETE_POWDER:
-    - 168
-    - 54
-    - 50
+    r: 168
+    g: 54
+    b: 50
   LIGHT_GRAY_CONCRETE_POWDER:
-    - 155
-    - 155
-    - 148
+    r: 155
+    g: 155
+    b: 148
   WHITE_CONCRETE_POWDER:
-    - 225
-    - 227
-    - 227
+    r: 225
+    g: 227
+    b: 227
   YELLOW_CONCRETE_POWDER:
-    - 233
-    - 199
-    - 54
+    r: 233
+    g: 199
+    b: 54
   PURPLE_CONCRETE:
-    - 100
-    - 31
-    - 156
+    r: 100
+    g: 31
+    b: 156
   RED_CONCRETE:
-    - 142
-    - 32
-    - 32
+    r: 142
+    g: 32
+    b: 32
   LIGHT_GRAY_CONCRETE:
-    - 125
-    - 125
-    - 115
+    r: 125
+    g: 125
+    b: 115
   WHITE_CONCRETE:
-    - 207
-    - 213
-    - 214
+    r: 207
+    g: 213
+    b: 214
   YELLOW_CONCRETE:
-    - 240
-    - 175
-    - 21
+    r: 240
+    g: 175
+    b: 21
   COPPER_BLOCK:
-    - 190
-    - 106
-    - 78
+    r: 190
+    g: 106
+    b: 78
   COPPER_ORE:
-    - 124
-    - 125
-    - 119
+    r: 124
+    g: 125
+    b: 119
   TUBE_CORAL_BLOCK:
-    - 48
-    - 87
-    - 206
+    r: 48
+    g: 87
+    b: 206
   DEAD_TUBE_CORAL_BLOCK:
-    - 130
-    - 123
-    - 119
+    r: 130
+    g: 123
+    b: 119
   BRAIN_CORAL_BLOCK:
-    - 207
-    - 90
-    - 159
+    r: 207
+    g: 90
+    b: 159
   DEAD_BRAIN_CORAL_BLOCK:
-    - 123
-    - 117
-    - 113
+    r: 123
+    g: 117
+    b: 113
   BUBBLE_CORAL_BLOCK:
-    - 184
-    - 33
-    - 180
+    r: 184
+    g: 33
+    b: 180
   DEAD_BUBBLE_CORAL_BLOCK:
-    - 132
-    - 123
-    - 119
+    r: 132
+    g: 123
+    b: 119
   FIRE_CORAL_BLOCK:
-    - 162
-    - 35
-    - 48
+    r: 162
+    g: 35
+    b: 48
   DEAD_FIRE_CORAL_BLOCK:
-    - 131
-    - 123
-    - 119
+    r: 131
+    g: 123
+    b: 119
   HORN_CORAL_BLOCK:
-    - 216
-    - 200
-    - 66
+    r: 216
+    g: 200
+    b: 66
   DEAD_HORN_CORAL_BLOCK:
-    - 133
-    - 126
-    - 122
+    r: 133
+    g: 126
+    b: 122
   CRACKED_DEEPSLATE_BRICKS:
     - 63
     - 63
@@ -1108,38 +1108,38 @@ blocks:
     - 175
     - 217
   LIME_WOOL:
-    - 112
-    - 185
-    - 25
+    r: 112
+    g: 185
+    b: 25
   MAGENTA_WOOL:
-    - 189
-    - 68
-    - 179
+    r: 189
+    g: 68
+    b: 179
   ORANGE_WOOL:
-    - 240
-    - 118
-    - 19
+    r: 240
+    g: 118
+    b: 19
   PINK_WOOL:
-    - 237
-    - 141
-    - 172
+    r: 237
+    g:g: 141
+    b: 172
   PURPLE_WOOL:
-    - 121
-    - 42
-    - 172
+    r: 121
+    g: 42
+    b: 172
   RED_WOOL:
-    - 161
-    - 39
-    - 34
+    r: 161
+    g: 39
+    b: 34
   LIGHT_GRAY_WOOL:
-    - 142
-    - 142
-    - 134
+    r: 142
+    g: 142
+    b: 134
   WHITE_WOOL:
-    - 233
-    - 236
-    - 236
+    r: 233
+    g: 236
+    b: 236
   YELLOW_WOOL:
-    - 248
-    - 198
-    - 39
+    r: 248
+    g: 198
+    b: 39
