@@ -515,7 +515,7 @@ blocks:
     - 153
     - 51
     - 51
-  SILVER_STAINED_GLASS:
+  LIGHT_GRAY_STAINED_GLASS:
     - 153
     - 153
     - 153
@@ -883,7 +883,7 @@ blocks:
     - 141
     - 108
     - 108
-  RED_NETHER_BRICK:
+  RED_NETHER_BRICKS:
     - 69
     - 7
     - 9
@@ -971,7 +971,7 @@ blocks:
     - 117
     - 117
     - 117
-  MOSSY_STONE_BRICK:
+  MOSSY_STONE_BRICKS:
     - 114
     - 120
     - 103
@@ -1139,7 +1139,7 @@ blocks:
     - 233
     - 236
     - 236
-  YELLOW:
+  YELLOW_WOOL:
     - 248
     - 198
     - 39
