@@ -568,65 +568,65 @@ blocks:
     g: 145
     b: 89
   PINK_GLAZED_TERRACOTTA:
-    - 235
-    - 155
-    - 182
+    r: 235
+    g: 155
+    b: 182
   PURPLE_GLAZED_TERRACOTTA:
-    - 110
-    - 47
-    - 153
+    r: 110
+    g: 47
+    b: 153
   RED_GLAZED_TERRACOTTA:
-    - 182
-    - 59
-    - 53
+    r: 182
+    g: 59
+    b: 53
   LIGHT_GRAY_GLAZED_TERRACOTTA:
-    - 143
-    - 166
-    - 168
+    r: 143
+    g: 166
+    b: 168
   WHITE_GLAZED_TERRACOTTA:
-    - 186
-    - 212
-    - 206
+    r: 186
+    g: 212
+    b: 206
   YELLOW_GLAZED_TERRACOTTA:
-    - 234
-    - 191
-    - 87
+    r: 234
+    g: 191
+    b: 87
   GLOWSTONE:
-    - 171
-    - 130
-    - 84
+    r: 171
+    g: 130
+    b: 84
   GOLD_BLOCK:
-    - 246
-    - 209
-    - 63
+    r: 246
+    g: 209
+    b: 63
   GOLD_ORE:
-    - 146
-    - 134
-    - 105
+    r: 146
+    g: 134
+    b: 105
   GRAVEL:
-    - 132
-    - 127
-    - 126
+    r: 132
+    g: 127
+    b: 126
   HAY_BLOCK:
-    - 167
-    - 137
-    - 38
+    r: 167
+    g: 137
+    b: 38
   HONEYCOMB_BLOCK:
-    - 229
-    - 148
-    - 30
+    r: 229
+    g: 148
+    b: 30
   HONEY_BLOCK:
-    - 250
-    - 188
-    - 57
+    r: 250
+    g: 188
+    b: 57
   ICE:
-    - 145
-    - 183
-    - 253
+    r: 145
+    g: 183
+    b: 253
   PACKED_ICE:
-    - 141
-    - 180
-    - 250
+    r: 141
+    g: 180
+    b: 250
   IRON_BARS:
     - 65
     - 66
