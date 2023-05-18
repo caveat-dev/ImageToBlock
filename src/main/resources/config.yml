@@ -318,7 +318,7 @@ blocks:
   CRACKED_NETHER_BRICKS:
     r: 40
     g: 20
-    b:g: 23
+    b: 23
   CRACKED_POLISHED_BLACKSTONE_BRICKS:
     r: 44
     g: 37
@@ -652,153 +652,153 @@ blocks:
     g: 117
     b: 142
   LODESTONE:
-    - 118
-    - 118
-    - 121
+    r: 118
+    g: 118
+    b: 121
   ACACIA_LOG:
-    - 102
-    - 95
-    - 86
+    r: 102
+    g: 95
+    b: 86
   BIRCH_LOG:
-    - 218
-    - 216
-    - 211
+    r: 218
+    g: 216
+    b: 211
   JUNGLE_LOG:
-    - 85
-    - 67
-    - 25
+    r: 85
+    g: 67
+    b: 25
   OAK_LOG:
-    - 107
-    - 84
-    - 50
+    r: 107
+    g: 84
+    b: 50
   SPRUCE_LOG:
-    - 58
-    - 37
-    - 16
+    r: 58
+    g: 37
+    b: 16
   LOOM:
-    - 143
-    - 98
-    - 71
+    r: 143
+    g: 98
+    b: 71
   MAGMA_BLOCK:
-    - 141
-    - 62
-    - 31
+    r: 141
+    g: 62
+    b: 31
   MANGROVE_LOG:
-    - 83
-    - 66
-    - 41
+    r: 83
+    g: 66
+    b: 41
   MANGROVE_PLANKS:
-    - 117
-    - 53
-    - 48
+    r: 117
+    g: 53
+    b: 48
   MANGROVE_ROOTS:
-    - 43
-    - 34
-    - 22
+    r: 43
+    g: 34
+    b: 22
   MELON:
-    - 114
-    - 145
-    - 30
+    r: 114
+    g: 145
+    b: 30
   SPAWNER:
-    - 24
-    - 32
-    - 43
+    r: 24
+    g: 32
+    b: 43
   MOSS_BLOCK:
-    - 89
-    - 110
-    - 45
+    r: 89
+    g: 110
+    b: 45
   MUD:
-    - 60
-    - 57
-    - 60
+    r: 60
+    g: 57
+    b: 60
   MUDDY_MANGROVE_ROOTS:
-    - 68
-    - 58
-    - 47
+    r: 68
+    g: 58
+    b: 47
   MUD_BRICKS:
-    - 137
-    - 104
-    - 79
+    r: 137
+    g: 104
+    b: 79
   MYCELIUM:
-    - 113
-    - 87
-    - 71
+    r: 113
+    g: 87
+    b: 71
   NETHERITE_BLOCK:
-    - 67
-    - 62
-    - 65
+    r: 67
+    g: 62
+    b: 65
   NETHERRACK:
-    - 97
-    - 38
-    - 38
+    r: 97
+    g: 38
+    b: 38
   NETHER_BRICK:
-    - 44
-    - 21
-    - 26
+    r: 44
+    g: 21
+    b: 26
   NETHER_GOLD_ORE:
-    - 116
-    - 56
-    - 42
+    r: 116
+    g: 56
+    b: 42
   NETHER_WART_BLOCK:
-    - 115
-    - 3
-    - 2
+    r: 115
+    g: 3
+    b: 2
   NOTE_BLOCK:
-    - 91
-    - 60
-    - 41
+    r: 91
+    g: 60
+    b: 41
   OBSERVER:
-    - 71
-    - 69
-    - 69
+    r: 71
+    g: 69
+    b: 69
   OBSIDIAN:
-    - 15
-    - 10
-    - 25
+    r: 15
+    g: 10
+    b: 25
   OCHRE_FROGLIGHT:
-    - 246
-    - 235
-    - 184
+    r: 246
+    g: 235
+    b: 184
   OXIDIZED_COPPER:
-    - 80
-    - 160
-    - 131
+    r: 80
+    g: 160
+    b: 131
   OXIDIZED_CUT_COPPER:
-    - 78
-    - 151
-    - 125
+    r: 78
+    g: 151
+    b: 125
   PACKED_MUD:
-    - 142
-    - 106
-    - 79
+    r: 142
+    g: 106
+    b: 79
   PEARLESCENT_FROGLIGHT:
-    - 236
-    - 227
-    - 230
+    r: 236
+    g: 227
+    b: 230
   PISTON:
-    - 112
-    - 106
-    - 97
+    r: 112
+    g: 106
+    b: 97
   ACACIA_PLANKS:
-    - 167
-    - 90
-    - 50
+    r: 167
+    g: 90
+    b: 50
   BIRCH_PLANKS:
-    - 192
-    - 175
-    - 121
+    r: 192
+    g: 175
+    b: 121
   JUNGLE_PLANKS:
-    - 160
-    - 115
-    - 80
+    r: 160
+    g: 115
+    b: 80
   OAK_PLANKS:
-    - 162
-    - 130
-    - 78
+    r: 162
+    g: 130
+    b: 78
   SPRUCE_PLANKS:
-    - 114
-    - 84
-    - 48
+    r: 114
+    g: 84
+    b: 48
   POLISHED_BASALT:
     - 91
     - 90
@@ -988,121 +988,121 @@ blocks:
     - 132
     - 131
   DIORITE:
-    - 188
-    - 188
-    - 188
+    r: 188
+    g: 188
+    b: 188
   POLISHED_DIORITE:
-    - 191
-    - 191
-    - 192
+    r: 191
+    g: 191
+    b: 192
   GRANITE:
-    - 149
-    - 102
-    - 85
+    r: 149
+    g: 102
+    b: 85
   POLISHED_GRANITE:
-    - 151
-    - 104
-    - 86
+    r: 151
+    g: 104
+    b: 86
   STONE_SLAB:
-    - 165
-    - 165
-    - 165
+    r: 165
+    g: 165
+    b: 165
   STRIPPED_ACACIA_LOG:
-    - 175
-    - 93
-    - 60
+    r: 175
+    g: 93
+    b: 60
   STRIPPED_BIRCH_LOG:
-    - 198
-    - 177
-    - 119
+    r: 198
+    g: 177
+    b: 119
   STRIPPED_CRIMSON_STEM:
-    - 137
-    - 57
-    - 90
+    r: 137
+    g: 57
+    b: 90
   STRIPPED_DARK_OAK_LOG:
-    - 73
-    - 57
-    - 36
+    r: 73
+    g: 57
+    b: 36
   STRIPPED_JUNGLE_LOG:
-    - 171
-    - 133
-    - 84
+    r: 171
+    g: 133
+    b: 84
   STRIPPED_MANGROVE_LOG:
-    - 119
-    - 54
-    - 48
+    r: 119
+    g: 54
+    b: 48
   STRIPPED_OAK_LOG:
-    - 179
-    - 145
-    - 87
+    r: 179
+    g: 145
+    b: 87
   STRIPPED_SPRUCE_LOG:
-    - 80
-    - 61
-    - 34
+    r: 80
+    g: 61
+    b: 34
   STRIPPED_WARPED_STEM:
-    - 57
-    - 151
-    - 148
+    r: 57
+    g: 151
+    b: 148
   TARGET:
-    - 228
-    - 173
-    - 165
+    r: 228
+    g: 173
+    b: 165
   TNT:
-    - 179
-    - 86
-    - 82
+    r: 179
+    g: 86
+    b: 82
   TUFF:
-    - 107
-    - 108
-    - 102
+    r: 107
+    g: 108
+    b: 102
   WARPED_NYLIUM:
-    - 72
-    - 62
-    - 60
+    r: 72
+    g: 62
+    b: 60
   WARPED_PLANKS:
-    - 43
-    - 104
-    - 98
+    r: 43
+    g: 104
+    b: 98
   WARPED_STEM:
-    - 58
-    - 58
-    - 77
+    r: 58
+    g: 58
+    b: 77
   WARPED_WART_BLOCK:
-    - 22
-    - 120
-    - 121
+    r: 22
+    g: 120
+    b: 121
   WEATHERED_COPPER:
-    - 107
-    - 151
-    - 107
+    r: 107
+    g: 151
+    b: 107
   WEATHERED_CUT_COPPER:
-    - 109
-    - 143
-    - 105
+    r: 109
+    g: 143
+    b: 105
   BLACK_WOOL:
-    - 20
-    - 21
-    - 25
+    r: 20
+    g: 21
+    b: 25
   BLUE_WOOL:
-    - 53
-    - 57
-    - 157
+    r: 53
+    g: 57
+    b: 157
   BROWN_WOOL:
-    - 114
-    - 71
-    - 40
+    r: 114
+    g: 71
+    b: 40
   CYAN_WOOL:
-    - 21
-    - 137
-    - 145
+    r: 21
+    g: 137
+    b: 145
   GRAY_WOOL:
-    - 62
-    - 68
-    - 71
+    r: 62
+    g: 68
+    b: 71
   GREEN_WOOL:
-    - 84
-    - 109
-    - 27
+    r: 84
+    g: 109
+    b: 27
   LIGHT_BLUE_WOOL:
     r: 58
     g: 175
