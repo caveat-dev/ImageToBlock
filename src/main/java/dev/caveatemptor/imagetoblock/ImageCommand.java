@@ -11,18 +11,15 @@ import org.bukkit.configuration.file.FileConfiguration;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.awt.image.RasterFormatException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.Map;
 
 import static java.lang.Integer.parseInt;
 import static java.lang.Math.abs;
-import static org.bukkit.Material.*;
 
-public class Image implements CommandExecutor {
+public class ImageCommand implements CommandExecutor {
     ImageToBlock plugin = ImageToBlock.getInstance();
     FileConfiguration config = plugin.getConfig();
     Server server = plugin.getServer();
@@ -34,7 +31,6 @@ public class Image implements CommandExecutor {
             return true;
 
         BufferedImage img = getImage();
-        ArrayList<BufferedImage> imgChunks = new ArrayList<>();
 
         int originX;
         int originY;
@@ -47,24 +43,26 @@ public class Image implements CommandExecutor {
             return true;
         }
 
-        int imgX = 0;
+        sender.sendMessage(Component.text(img.getWidth() + " " + img.getHeight()));
+
+        int imgX = img.getWidth() - 1;
         int imgY = img.getHeight() - 1;
-        for (int y = originY; y < y + img.getHeight() - 1; y++) {
-            for (int x = originX; x < originX + img.getWidth() - 1; x++) {
+        for (int y = originY; y < originY + img.getHeight(); y++) {
+            for (int x = originX; x < originX + img.getWidth(); x++) {
                 Color pixelColor = new Color(img.getRGB(imgX, imgY));
 
                 Material blockToPlace = getBlockClosestInColor(pixelColor);
 
                 plugin.getServer().getWorlds().get(0).getBlockAt(x, y, originZ).setType(blockToPlace);
 
-                imgX++;
+                imgX--;
             }
-            sender.sendMessage(Component.text("Row " + (imgY+1) + " placed"));
+            sender.sendMessage(Component.text("y " + (imgY)));
             imgY--;
-            imgX = 0;
+            imgX = img.getWidth() - 1;
         }
 
-        sender.sendMessage(Component.text("Finished"));
+        sender.sendMessage(Component.text(img.getWidth() + " " + img.getHeight()));
 
         return true;
     }
@@ -73,8 +71,7 @@ public class Image implements CommandExecutor {
     private BufferedImage getImage() {
         URL url = null;
         try {
-            // url = new URL("https://img.freepik.com/premium-vector/color-spectrum-palette-hue-brightness-black-background-vector-illustration_522680-171.jpg?w=2000");
-            url = new URL("https://cdn.discordapp.com/attachments/1083975218407690350/1108861326941495386/testimage.png");
+            url = new URL("https://cdn.discordapp.com/attachments/1083975218407690350/1108900115332223007/testimage.png");
         } catch (MalformedURLException ignored) {
             System.out.println("bad url");
         }
