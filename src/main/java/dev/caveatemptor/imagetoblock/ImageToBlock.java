@@ -10,7 +10,7 @@ public final class ImageToBlock extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
-        this.getCommand("image").setExecutor(new Image());
+        this.getCommand("image").setExecutor(new ImageCommand());
 
         this.saveDefaultConfig();
     }
