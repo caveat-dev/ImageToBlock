@@ -1,5 +1,6 @@
 package dev.caveatemptor.imagetoblock;
 
+import net.kyori.adventure.text.Component;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.command.Command;
@@ -27,11 +28,12 @@ public class Image implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+
+        if (args.length < 3)
+            return true;
+
         BufferedImage img = getImage();
 
-        getBlockClosestInColor(new Color(0, 0, 0));
-
-        /*
         int x = 0;
         int y = 0;
         int z = 0;
@@ -39,30 +41,27 @@ public class Image implements CommandExecutor {
             x = parseInt(args[0]);
             y = parseInt(args[1]);
             z = parseInt(args[2]);
-        } catch (Exception ignored) {}
+        } catch (Exception ignored) {
+            return true;
+        }
 
         int imgX = 0;
         int imgY = 0;
         for (int i = y; i < y + img.getHeight() / 8; i++) {
             for (int j = x; j < x + img.getWidth() / 8; j++) {
-                Material block = WHITE_CONCRETE;
                 Color pixelColor = new Color(img.getRGB(imgX, imgY));
 
-                if (pixelColor.getRed() >= pixelColor.getBlue() && pixelColor.getRed() >= pixelColor.getGreen())
-                    block = RED_CONCRETE;
-                if (pixelColor.getGreen() >= pixelColor.getBlue() && pixelColor.getRed() >= pixelColor.getRed())
-                    block = GREEN_CONCRETE;
-                if (pixelColor.getBlue() >= pixelColor.getRed() && pixelColor.getBlue() >= pixelColor.getGreen())
-                    block = BLUE_CONCRETE;
+                Material blockToPlace = getBlockClosestInColor(pixelColor);
 
-                // plugin.getServer().getWorlds().get(0).getBlockAt(j, i, z).setType(block);
+                plugin.getServer().getWorlds().get(0).getBlockAt(j, i, z).setType(blockToPlace);
 
                 imgX++;
             }
             imgY++;
             imgX = 0;
         }
-        */
+
+        sender.sendMessage(Component.text("Width: " + img.getWidth() / 8 + " Height: " + img.getWidth() / 8));
 
         return true;
     }

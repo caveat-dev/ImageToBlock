@@ -12,7 +12,7 @@ public class LoadImageFromURL {
     public static BufferedImage getImage() {
         URL url = null;
         try {
-            url = new URL("https://www.gannett-cdn.com/presto/2023/03/31/PPAS/b2205264-eb93-4cf5-b96d-ff637e40b8c2-20230330_HarpoTheClownPortraits_001.jpg");
+            url = new URL("https://img.freepik.com/premium-vector/color-spectrum-palette-hue-brightness-black-background-vector-illustration_522680-171.jpg?w=2000");
         } catch (MalformedURLException ignored) {
             System.out.println("bad url");
         }
