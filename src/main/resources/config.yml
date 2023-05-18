@@ -310,11 +310,11 @@ blocks:
   CRACKED_DEEPSLATE_BRICKS:
     r: 63
     g: 63
-    b:g: 64
+    b: 64
   CRACKED_DEEPSLATE_TILES:
     r: 52
     g: 52
-    b:g: 52
+    b: 52
   CRACKED_NETHER_BRICKS:
     r: 40
     g: 20
@@ -322,15 +322,15 @@ blocks:
   CRACKED_POLISHED_BLACKSTONE_BRICKS:
     r: 44
     g: 37
-    b:g: 44
+    b: 44
   CRAFTING_TABLE:
     r: 135
     g: 108
-    b:g: 66
+    b: 66
   CRIMSON_STEM:
     r: 92
     g: 25
-    b:g: 30
+    b: 30
   CRIMSON_NYLIUM:
     r: 107
     g: 27
@@ -459,74 +459,6 @@ blocks:
     r: 55
     g: 43
     b: 38
-  GLASS:
-    r: 136
-    g: 144
-    b: 145
-  BLACK_STAINED_GLASS:
-    r: 25
-    g: 25
-    b: 25
-  BLUE_STAINED_GLASS:
-    r: 51
-    g: 76
-    b: 178
-  BROWN_STAINED_GLASS:
-    r: 102
-    g: 76
-    b: 51
-  CYAN_STAINED_GLASS:
-    r: 76
-    g: 127
-    b: 153
-  GRAY_STAINED_GLASS:
-    r: 76
-    g: 76
-    b: 76
-  GREEN_STAINED_GLASS:
-    r: 102
-    g: 127
-    b: 51
-  LIGHT_BLUE_STAINED_GLASS:
-    r: 102
-    g: 153
-    b: 216
-  LIME_STAINED_GLASS:
-    r: 127
-    g: 204
-    b: 25
-  MAGENTA_STAINED_GLASS:
-    r: 178
-    g: 76
-    b: 216
-  ORANGE_STAINED_GLASS:
-    r: 216
-    g: 127
-    b: 51
-  PINK_STAINED_GLASS:
-    r: 242
-    g: 127
-    b: 165
-  PURPLE_STAINED_GLASS:
-    r: 127
-    g: 63
-    b: 178
-  RED_STAINED_GLASS:
-    r: 153
-    g: 51
-    b: 51
-  LIGHT_GRAY_STAINED_GLASS:
-    r: 153
-    g: 153
-    b: 153
-  WHITE_STAINED_GLASS:
-    r: 255
-    g: 255
-    b: 255
-  YELLOW_STAINED_GLASS:
-    r: 229
-    g: 229
-    b: 51
   BLACK_GLAZED_TERRACOTTA:
     r: 68
     g: 30
@@ -719,10 +651,6 @@ blocks:
     r: 137
     g: 104
     b: 79
-  MYCELIUM:
-    r: 113
-    g: 87
-    b: 71
   NETHERITE_BLOCK:
     r: 67
     g: 62
@@ -731,7 +659,7 @@ blocks:
     r: 97
     g: 38
     b: 38
-  NETHER_BRICK:
+  NETHER_BRICKS:
     r: 44
     g: 21
     b: 26
@@ -855,10 +783,6 @@ blocks:
     r: 234
     g: 228
     b: 221
-  QUARTZ:
-    r: 119
-    g: 67
-    b: 64
   RAW_COPPER_BLOCK:
     r: 155
     g: 106
@@ -902,7 +826,7 @@ blocks:
   RESPAWN_ANCHOR:
     r: 39
     g: 23
-    r: 63
+    b: 63
   SAND:
     r: 219
     g: 207
@@ -1003,10 +927,6 @@ blocks:
     r: 151
     g: 104
     b: 86
-  STONE_SLAB:
-    r: 165
-    g: 165
-    b: 165
   STRIPPED_ACACIA_LOG:
     r: 175
     g: 93
@@ -1121,7 +1041,7 @@ blocks:
     b: 19
   PINK_WOOL:
     r: 237
-    g:g: 141
+    g: 141
     b: 172
   PURPLE_WOOL:
     r: 121
