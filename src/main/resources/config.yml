@@ -800,193 +800,193 @@ blocks:
     g: 84
     b: 48
   POLISHED_BASALT:
-    - 91
-    - 90
-    - 93
+    r: 91
+    g: 90
+    b: 93
   POLISHED_BLACKSTONE:
-    - 52
-    - 47
-    - 55
+    r: 52
+    g: 47
+    b: 55
   POLISHED_BLACKSTONE_BRICKS:
-    - 48
-    - 42
-    - 49
+    r: 48
+    g: 42
+    b: 49
   POLISHED_DEEPSLATE:
-    - 70
-    - 70
-    - 71
+    r: 70
+    g: 70
+    b: 71
   POWDER_SNOW:
-    - 247
-    - 253
-    - 253
+    r: 247
+    g: 253
+    b: 253
   PRISMARINE_BRICKS:
-    - 97
-    - 170
-    - 157
+    r: 97
+    g: 170
+    b: 157
   DARK_PRISMARINE:
-    - 51
-    - 90
-    - 75
+    r: 51
+    g: 90
+    b: 75
   PRISMARINE:
-    - 99
-    - 156
-    - 151
+    r: 99
+    g: 156
+    b: 151
   PUMPKIN:
-    - 197
-    - 116
-    - 24
+    r: 197
+    g: 116
+    b: 24
   PURPUR_BLOCK:
-    - 168
-    - 124
-    - 168
+    r: 168
+    g: 124
+    b: 168
   PURPUR_PILLAR:
-    - 170
-    - 127
-    - 169
+    r: 170
+    g: 127
+    b: 169
   CHISELED_QUARTZ_BLOCK:
-    - 232
-    - 227
-    - 218
+    r: 232
+    g: 227
+    b: 218
   QUARTZ_BLOCK:
-    - 235
-    - 229
-    - 222
+    r: 235
+    g: 229
+    b: 222
   QUARTZ_BRICKS:
-    - 234
-    - 228
-    - 221
+    r: 234
+    g: 228
+    b: 221
   QUARTZ:
-    - 119
-    - 67
-    - 64
+    r: 119
+    g: 67
+    b: 64
   RAW_COPPER_BLOCK:
-    - 155
-    - 106
-    - 79
+    r: 155
+    g: 106
+    b: 79
   RAW_GOLD_BLOCK:
-    - 221
-    - 169
-    - 46
+    r: 221
+    g: 169
+    b: 46
   RAW_IRON_BLOCK:
-    - 166
-    - 136
-    - 107
+    r: 166
+    g: 136
+    b: 107
   REDSTONE_BLOCK:
-    - 171
-    - 24
-    - 4
+    r: 171
+    g: 24
+    b: 4
   REDSTONE_LAMP:
-    - 98
-    - 56
-    - 30
+    r: 98
+    g: 56
+    b: 30
   REDSTONE_ORE:
-    - 141
-    - 108
-    - 108
+    r: 141
+    g: 108
+    b: 108
   RED_NETHER_BRICKS:
-    - 69
-    - 7
-    - 9
+    r: 69
+    g: 7
+    b: 9
   RED_SAND:
-    - 190
-    - 102
-    - 33
+    r: 190
+    g: 102
+    b: 33
   RED_SANDSTONE:
-    - 186
-    - 99
-    - 29
+    r: 186
+    g: 99
+    b: 29
   SMOOTH_RED_SANDSTONE:
-    - 188
-    - 101
-    - 31
+    r: 188
+    g: 101
+    b: 31
   RESPAWN_ANCHOR:
-    - 39
-    - 23
-    - 63
+    r: 39
+    g: 23
+    r: 63
   SAND:
-    - 219
-    - 207
-    - 163
+    r: 219
+    g: 207
+    b: 163
   SANDSTONE:
-    - 216
-    - 203
-    - 155
+    r: 216
+    g: 203
+    b: 155
   SMOOTH_SANDSTONE:
-    - 217
-    - 205
-    - 158
+    r: 217
+    g: 205
+    b: 158
   SEA_LANTERN:
-    - 178
-    - 204
-    - 194
+    r: 178
+    g: 204
+    b: 194
   SHROOMLIGHT:
-    - 241
-    - 149
-    - 74
+    r: 241
+    g: 149
+    b: 74
   SLIME_BLOCK:
-    - 111
-    - 191
-    - 91
+    r: 111
+    g: 191
+    b: 91
   SMITHING_TABLE:
-    - 56
-    - 34
-    - 35
+    r: 56
+    g: 34
+    b: 35
   SMOKER:
-    - 101
-    - 91
-    - 77
+    r: 101
+    g: 91
+    b: 77
   SMOOTH_BASALT:
-    - 72
-    - 72
-    - 78
+    r: 72
+    g: 72
+    b: 78
   SNOW:
-    - 248
-    - 254
-    - 254
+    r: 248
+    g: 254
+    b: 254
   SOUL_SAND:
-    - 81
-    - 62
-    - 50
+    r: 81
+    g: 62
+    b: 50
   SOUL_SOIL:
-    - 75
-    - 57
-    - 46
+    r: 75
+    g: 57
+    b: 46
   SPONGE:
-    - 196
-    - 192
-    - 74
+    r: 196
+    g: 192
+    b: 74
   WET_SPONGE:
-    - 170
-    - 180
-    - 70
+    r: 170
+    g: 180
+    b:  70
   STONE:
-    - 125
-    - 125
-    - 125
+    r: 125
+    g: 125
+    b: 125
   STONE_BRICKS:
-    - 121
-    - 121
-    - 121
+    r: 121
+    g: 121
+    b: 121
   CRACKED_STONE_BRICKS:
-    - 117
-    - 117
-    - 117
+    r: 117
+    g: 117
+    b: 117
   MOSSY_STONE_BRICKS:
-    - 114
-    - 120
-    - 103
+    r: 114
+    g: 120
+    b: 103
   STONECUTTER:
-    - 125
-    - 126
-    - 125
+    r: 125
+    g: 126
+    b: 125
   ANDESITE:
-    - 136
-    - 136
-    - 136
+    r: 136
+    g: 136
+    b: 136
   POLISHED_ANDESITE:
-    - 129
-    - 132
-    - 131
+    r: 129
+    g: 132
+    b: 131
   DIORITE:
     r: 188
     g: 188
