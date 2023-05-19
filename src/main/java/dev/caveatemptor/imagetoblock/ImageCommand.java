@@ -65,7 +65,9 @@ public class ImageCommand implements CommandExecutor {
 
         sendMessage(sender, "Placing layers...");
         imgLayers.forEach((layer) -> {
-            buildLayer(layer, originX, originY + imgLayers.indexOf(layer), originZ);
+            if (originY + imgLayers.indexOf(layer) < server.getWorlds().get(0).getMaxHeight()) {
+                buildLayer(layer, originX, originY + imgLayers.indexOf(layer), originZ);
+            }
         });
         sendMessage(sender, "Done!");
 
