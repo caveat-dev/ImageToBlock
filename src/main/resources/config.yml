@@ -11,10 +11,6 @@ blocks:
     r: 96
     g: 64
     b: 56
-  ANVIL:
-    r: 69
-    g: 69
-    b: 69
   BARREL:
     r: 107
     g: 80
@@ -67,10 +63,6 @@ blocks:
     r: 223
     g: 224
     b: 220
-  CAULDRON:
-    r: 74
-    g: 73
-    b: 74
   CHEST:
     r: 126
     g: 91
@@ -367,10 +359,6 @@ blocks:
     r: 107
     g: 137
     b: 115
-  END_PORTAL_FRAME:
-    r: 122
-    g: 131
-    b: 99
   END_STONE_BRICKS:
     r: 218
     g: 224
@@ -559,10 +547,6 @@ blocks:
     r: 117
     g: 53
     b: 48
-  MANGROVE_ROOTS:
-    r: 43
-    g: 34
-    b: 22
   MELON:
     r: 114
     g: 145
@@ -827,10 +811,6 @@ blocks:
     r: 114
     g: 120
     b: 103
-  STONECUTTER:
-    r: 125
-    g: 126
-    b: 125
   ANDESITE:
     r: 136
     g: 136
@@ -903,10 +883,6 @@ blocks:
     r: 107
     g: 108
     b: 102
-  WARPED_NYLIUM:
-    r: 72
-    g: 62
-    b: 60
   WARPED_PLANKS:
     r: 43
     g: 104
