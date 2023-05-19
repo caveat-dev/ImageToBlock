@@ -15,10 +15,6 @@ blocks:
     r: 69
     g: 69
     b: 69
-  AZALEA:
-    r: 57
-    g: 72
-    b: 27
   BARREL:
     r: 107
     g: 80
@@ -371,10 +367,6 @@ blocks:
     r: 107
     g: 137
     b: 115
-  ENCHANTING_TABLE:
-    r: 36
-    g: 32
-    b: 41
   END_PORTAL_FRAME:
     r: 122
     g: 131
@@ -507,10 +499,6 @@ blocks:
     r: 141
     g: 180
     b: 250
-  IRON_BARS:
-    r: 65
-    g: 66
-    b: 64
   IRON_BLOCK:
     r: 222
     g: 222

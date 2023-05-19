@@ -71,7 +71,7 @@ public class ImageCommand implements CommandExecutor {
     private BufferedImage getImage() {
         URL url = null;
         try {
-            url = new URL("https://cdn.discordapp.com/attachments/1083975218407690350/1108900115332223007/testimage.png");
+            url = new URL("https://cdn.discordapp.com/attachments/1083975218407690350/1108905658570526900/hi.jpg");
         } catch (MalformedURLException ignored) {
             System.out.println("bad url");
         }
