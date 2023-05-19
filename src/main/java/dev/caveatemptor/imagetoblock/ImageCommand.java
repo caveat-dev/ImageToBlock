@@ -65,7 +65,12 @@ public class ImageCommand implements CommandExecutor {
 
         sendMessage(sender, "Placing layers...");
         imgLayers.forEach((layer) -> {
-            buildLayer(layer, originX, originY + imgLayers.indexOf(layer), originZ);
+            if (originY + imgLayers.indexOf(layer) < server.getWorlds().get(0).getMaxHeight()) {
+                buildLayer(layer, originX, originY + imgLayers.indexOf(layer), originZ);
+            }
+            else {
+                sendMessage(sender, "Built height met, stopping!", RED);
+            }
         });
         sendMessage(sender, "Done!");
 
@@ -90,7 +95,7 @@ public class ImageCommand implements CommandExecutor {
     private BufferedImage getImage() {
         URL url = null;
         try {
-            url = new URL("https://cdn.discordapp.com/attachments/1083975218407690350/1109229087924441148/freya.jpg");
+            url = new URL("https://media.discordapp.net/attachments/1083975218407690350/1109232578327760986/freya_small.jpg?width=468&height=468");
         } catch (MalformedURLException ignored) {
             System.out.println("bad url");
         }
