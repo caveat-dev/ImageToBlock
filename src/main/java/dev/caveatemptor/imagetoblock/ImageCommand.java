@@ -8,19 +8,23 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.jetbrains.annotations.NotNull;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 import static java.lang.Integer.parseInt;
 import static java.lang.Math.abs;
 import static net.kyori.adventure.text.format.NamedTextColor.*;
+import static org.bukkit.Material.*;
 
 public class ImageCommand implements CommandExecutor {
     ImageToBlock plugin = ImageToBlock.getInstance();
@@ -28,7 +32,7 @@ public class ImageCommand implements CommandExecutor {
     Server server = plugin.getServer();
 
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
 
         if (args.length < 3)
             return true;
@@ -39,9 +43,6 @@ public class ImageCommand implements CommandExecutor {
         for (int y = img.getHeight()-1; y >= 0; y--) {
             imgLayers.add(img.getSubimage(0, y, img.getWidth()-1, 1));
         }
-
-        // TODO: Fix layer X, reverse
-        // TODO: reimplement barrier block bottom
 
         int originX;
         int originY;
@@ -55,18 +56,24 @@ public class ImageCommand implements CommandExecutor {
             return true;
         }
 
-        // buildImage(sender, img, originX, originY, originZ);
+        // make a barrier block layer on the bottom to stop physics blocks from falling
+        sendMessage(sender, "Placing barrier block bottom...");
+        for (int x = originX; x < originX + img.getWidth()-1; x++) {
+            server.getWorlds().get(0).getBlockAt(x, originY-1, originZ).setType(BARRIER);
+        }
+        sendMessage(sender, "Done!");
 
+        sendMessage(sender, "Placing layers...");
         imgLayers.forEach((layer) -> {
-            buildLayer(sender, layer, originX, originY + imgLayers.indexOf(layer), originZ);
+            buildLayer(layer, originX, originY + imgLayers.indexOf(layer), originZ);
         });
-        sender.sendMessage("DONE!");
+        sendMessage(sender, "Done!");
 
         return true;
     }
 
 
-    private void buildLayer(CommandSender sender, BufferedImage img, int originX, int originY, int originZ) {
+    private void buildLayer(BufferedImage img, int originX, int originY, int originZ) {
         int imgX = img.getWidth() - 1;
         for (int x = originX; x < originX + img.getWidth(); x++) {
             Color pixelColor = new Color(img.getRGB(imgX, 0));
@@ -81,12 +88,19 @@ public class ImageCommand implements CommandExecutor {
 
 
     private BufferedImage getImage() {
-        File pathToFile = new File("C:\\\\Users\\wn10091617\\Downloads\\images.jpg");
-        BufferedImage img = null;
+        URL url = null;
         try {
-            img = ImageIO.read(pathToFile);
+            url = new URL("https://cdn.discordapp.com/attachments/1083975218407690350/1109229087924441148/freya.jpg");
+        } catch (MalformedURLException ignored) {
+            System.out.println("bad url");
+        }
+
+        BufferedImage img;
+        try {
+            assert url != null;
+            img = ImageIO.read(url);
         } catch (IOException e) {
-            System.out.println("failed to get image");
+            throw new RuntimeException(e);
         }
 
         return img;
@@ -94,12 +108,10 @@ public class ImageCommand implements CommandExecutor {
 
 
     private Material getBlockClosestInColor(Color pixelColor) {
-        Map<String, Object> blockNames = config.getConfigurationSection("blocks").getValues(false);
+        Map<String, Object> blockNames = Objects.requireNonNull(config.getConfigurationSection("blocks")).getValues(false);
 
         float lowestAverageDifference = 999;
         Material closestBlockInColor = null;
-
-        // TODO: loop through config instead of every material to make things faster
 
         for (Material material : Material.values()) {
 
@@ -109,7 +121,7 @@ public class ImageCommand implements CommandExecutor {
 
             Map<String, Object> blockColors;
             try {
-                blockColors = config.getConfigurationSection("blocks." + materialName).getValues(false);
+                blockColors = Objects.requireNonNull(config.getConfigurationSection("blocks." + materialName)).getValues(false);
             }
             catch (IllegalArgumentException e) {
                 System.out.println("BLOCK NOT FOUND: " + materialName);
