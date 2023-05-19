@@ -39,7 +39,9 @@ public class ImageCommand implements CommandExecutor {
         for (int y = img.getHeight()-1; y >= 0; y--) {
             imgLayers.add(img.getSubimage(0, y, img.getWidth()-1, 1));
         }
-        reverseList(imgLayers);
+
+        // TODO: Fix layer X, reverse
+        // TODO: reimplement barrier block bottom
 
         int originX;
         int originY;
@@ -136,17 +138,5 @@ public class ImageCommand implements CommandExecutor {
 
     private void sendMessage(CommandSender sender, String message, TextColor color) {
         sender.sendMessage(Component.text(message).color(color));
-    }
-
-    private static <T> void reverseList(List<T> list)
-    {
-        if (list.size() <= 1)
-            return;
-
-        T value = list.remove(0);
-
-        reverseList(list);
-
-        list.add(value);
     }
 }
