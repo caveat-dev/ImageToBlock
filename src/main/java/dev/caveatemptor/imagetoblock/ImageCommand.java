@@ -37,13 +37,6 @@ public class ImageCommand implements CommandExecutor {
         if (args.length < 3)
             return true;
 
-        BufferedImage img = getImage();
-        List<BufferedImage> imgLayers = new ArrayList<>();
-        // split image into layers
-        for (int y = img.getHeight()-1; y >= 0; y--) {
-            imgLayers.add(img.getSubimage(0, y, img.getWidth()-1, 1));
-        }
-
         int originX;
         int originY;
         int originZ;
@@ -56,6 +49,66 @@ public class ImageCommand implements CommandExecutor {
             return true;
         }
 
+        if (server.getWorlds().get(0).getMaxHeight() - 5 <= originY) {
+            sendMessage(sender, "Too close to build limit!");
+            return true;
+        }
+
+        BufferedImage img = getImage();
+
+        // scale image to fit within 256x256 pixels
+        sendMessage(sender, "Scaling to fit within 256x256 pixels...");
+
+        int heightDifference = img.getHeight() - 256;
+        int widthDifference = img.getWidth() - 256;
+
+        if (heightDifference > 0) {
+            double scalePercent = (double) (img.getHeight() - heightDifference) / img.getHeight();
+
+            int newWidth = (int) (img.getWidth() * scalePercent);
+            int newHeight = (int) (img.getHeight() * scalePercent);
+
+            scaleImage(img, newWidth, newHeight);
+        }
+        if (widthDifference > 0) {
+            double scalePercent = (double) (img.getWidth() - widthDifference) / img.getWidth();
+
+            int newWidth = (int) (img.getWidth() * scalePercent);
+            int newHeight = (int) (img.getWidth() * scalePercent);
+
+            scaleImage(img, newWidth, newHeight);
+        }
+
+        sendMessage(sender, "Done!");
+
+        // check if image fits within the world build height limit
+        sendMessage(sender, "Scaling to fit within world build height...");
+
+        int maxHeight = server.getWorlds().get(0).getMaxHeight() - originY;
+        int height = img.getHeight() + originY;
+
+        int blocksOverbuildHeight = height - maxHeight;
+
+        // scale image to fit within world build height limit
+        if (blocksOverbuildHeight > 0) {
+            double scalePercent = (double) maxHeight / height;
+
+            int newWidth = (int) (img.getWidth() * scalePercent);
+            int newHeight = (int) (height * scalePercent);
+
+            img = scaleImage(img, newWidth, newHeight);
+        }
+
+        sendMessage(sender, "Done!");
+
+        sendMessage(sender, "Splitting image into layers...");
+        // split image into layers
+        List<BufferedImage> imgLayers = new ArrayList<>();
+        for (int y = img.getHeight()-1; y >= 0; y--) {
+            imgLayers.add(img.getSubimage(0, y, img.getWidth()-1, 1));
+        }
+        sendMessage(sender, "Done!");
+
         // make a barrier block layer on the bottom to stop physics blocks from falling
         sendMessage(sender, "Placing barrier block bottom...");
         for (int x = originX; x < originX + img.getWidth()-1; x++) {
@@ -65,9 +118,7 @@ public class ImageCommand implements CommandExecutor {
 
         sendMessage(sender, "Placing layers...");
         imgLayers.forEach((layer) -> {
-            if (originY + imgLayers.indexOf(layer) < server.getWorlds().get(0).getMaxHeight()) {
                 buildLayer(layer, originX, originY + imgLayers.indexOf(layer), originZ);
-            }
         });
         sendMessage(sender, "Done!");
 
@@ -92,7 +143,7 @@ public class ImageCommand implements CommandExecutor {
     private BufferedImage getImage() {
         URL url = null;
         try {
-            url = new URL("IMAGE URL HERE");
+            url = new URL("URL HERE");
         } catch (MalformedURLException ignored) {
             System.out.println("bad url");
         }
@@ -106,6 +157,18 @@ public class ImageCommand implements CommandExecutor {
         }
 
         return img;
+    }
+
+
+    private BufferedImage scaleImage(BufferedImage img, int newWidth, int newHeight) {
+        BufferedImage scaledImg = new BufferedImage(newWidth, newHeight, BufferedImage.TRANSLUCENT);
+
+        Graphics2D g2 = scaledImg.createGraphics();
+        g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+        g2.drawImage(img, 0, 0, newWidth, newHeight, null);
+        g2.dispose();
+
+        return scaledImg;
     }
 
 

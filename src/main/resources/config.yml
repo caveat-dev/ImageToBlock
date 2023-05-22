@@ -15,10 +15,6 @@ blocks:
     r: 74
     g: 73
     b: 78
-  BEACON:
-    r: 108
-    g: 218
-    b: 212
   BEEHIVE:
     r: 159
     g: 128
@@ -59,10 +55,6 @@ blocks:
     r: 223
     g: 224
     b: 220
-  CHEST:
-    r: 126
-    g: 91
-    b: 37
   CHISELED_DEEPSLATE:
     r: 54
     g: 54
@@ -859,10 +851,6 @@ blocks:
     r: 228
     g: 173
     b: 165
-  TNT:
-    r: 179
-    g: 86
-    b: 82
   TUFF:
     r: 107
     g: 108
