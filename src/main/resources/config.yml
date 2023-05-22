@@ -3,22 +3,10 @@ blocks:
     r: 134
     g: 98
     b: 192
-  AMETHYST_CLUSTER:
-    r: 91
-    g: 71
-    b: 116
   ANCIENT_DEBRIS:
     r: 96
     g: 64
     b: 56
-  ANVIL:
-    r: 69
-    g: 69
-    b: 69
-  AZALEA:
-    r: 57
-    g: 72
-    b: 27
   BARREL:
     r: 107
     g: 80
@@ -27,10 +15,6 @@ blocks:
     r: 74
     g: 73
     b: 78
-  BEACON:
-    r: 108
-    g: 218
-    b: 212
   BEEHIVE:
     r: 159
     g: 128
@@ -71,14 +55,6 @@ blocks:
     r: 223
     g: 224
     b: 220
-  CAULDRON:
-    r: 74
-    g: 73
-    b: 74
-  CHEST:
-    r: 126
-    g: 91
-    b: 37
   CHISELED_DEEPSLATE:
     r: 54
     g: 54
@@ -371,14 +347,6 @@ blocks:
     r: 107
     g: 137
     b: 115
-  ENCHANTING_TABLE:
-    r: 36
-    g: 32
-    b: 41
-  END_PORTAL_FRAME:
-    r: 122
-    g: 131
-    b: 99
   END_STONE_BRICKS:
     r: 218
     g: 224
@@ -395,10 +363,6 @@ blocks:
     r: 152
     g: 120
     b: 100
-  FROSTED_ICE:
-    r: 140
-    g: 181
-    b: 252
   FURNACE:
     r: 123
     g: 123
@@ -499,18 +463,10 @@ blocks:
     r: 250
     g: 188
     b: 57
-  ICE:
-    r: 145
-    g: 183
-    b: 253
   PACKED_ICE:
     r: 141
     g: 180
     b: 250
-  IRON_BARS:
-    r: 65
-    g: 66
-    b: 64
   IRON_BLOCK:
     r: 222
     g: 222
@@ -571,10 +527,6 @@ blocks:
     r: 117
     g: 53
     b: 48
-  MANGROVE_ROOTS:
-    r: 43
-    g: 34
-    b: 22
   MELON:
     r: 114
     g: 145
@@ -647,10 +599,6 @@ blocks:
     r: 236
     g: 227
     b: 230
-  PISTON:
-    r: 112
-    g: 106
-    b: 97
   ACACIA_PLANKS:
     r: 167
     g: 90
@@ -839,10 +787,6 @@ blocks:
     r: 114
     g: 120
     b: 103
-  STONECUTTER:
-    r: 125
-    g: 126
-    b: 125
   ANDESITE:
     r: 136
     g: 136
@@ -907,18 +851,10 @@ blocks:
     r: 228
     g: 173
     b: 165
-  TNT:
-    r: 179
-    g: 86
-    b: 82
   TUFF:
     r: 107
     g: 108
     b: 102
-  WARPED_NYLIUM:
-    r: 72
-    g: 62
-    b: 60
   WARPED_PLANKS:
     r: 43
     g: 104
