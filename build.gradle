@@ -19,9 +19,6 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.github.luojianping168:OpenCV:0.0.1'
-    implementation 'cc.drx:mat_2.13:ee'
-    implementation 'org.imgscalr:imgscalr-lib:4.2'
     compileOnly "io.papermc.paper:paper-api:1.19.4-R0.1-SNAPSHOT"
 }
 
