@@ -34,6 +34,9 @@ public class ImageCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
 
+        // TODO: image (here)
+        // TODO: fix URL shit and add url command // working on this
+
         if (args.length < 3)
             return true;
 
@@ -55,6 +58,9 @@ public class ImageCommand implements CommandExecutor {
         }
 
         BufferedImage img = getImage();
+
+
+        // TODO: fix scaling
 
         // scale image to fit within 256x256 pixels
         sendMessage(sender, "Scaling to fit within 256x256 pixels...");
@@ -173,6 +179,9 @@ public class ImageCommand implements CommandExecutor {
 
 
     private Material getBlockClosestInColor(Color pixelColor) {
+
+        // TODO: rewrite to use enums instead of a config
+
         Map<String, Object> blockNames = Objects.requireNonNull(config.getConfigurationSection("blocks")).getValues(false);
 
         float lowestAverageDifference = 999;
