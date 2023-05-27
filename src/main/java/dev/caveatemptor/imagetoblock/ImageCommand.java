@@ -152,7 +152,7 @@ public class ImageCommand implements CommandExecutor {
 
         Map<String, Object> blockNames = requireNonNull(config.getConfigurationSection("blocks")).getValues(false);
 
-        float lowestAverageDifference = 999; // TODO: find a better way to do this
+        float lowestAverageDifference = 99999; // TODO: find a better way to do this
         Material closestBlockInColor = null;
 
         for (Material material : Material.values()) {
@@ -165,7 +165,6 @@ public class ImageCommand implements CommandExecutor {
             try {
                 blockColors = requireNonNull(config.getConfigurationSection("blocks." + materialName)).getValues(false);
             } catch (IllegalArgumentException e) {
-                System.out.println("BLOCK NOT FOUND: " + materialName);
                 continue;
             }
 
@@ -181,8 +180,8 @@ public class ImageCommand implements CommandExecutor {
             }
         }
 
-        if (closestBlockInColor == null) // This really shouldn't be an issue, but it is. Short term solution
-            closestBlockInColor = AIR; // TODO: Fix this
+        if (closestBlockInColor == null) // This really shouldn't be an issue, but it's good to have this just in case
+            closestBlockInColor = AIR; // if the space is air it should be pretty clear something went wrong
 
         return closestBlockInColor;
     }
