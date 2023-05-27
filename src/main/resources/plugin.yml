@@ -4,7 +4,15 @@ main: dev.caveatemptor.imagetoblock.ImageToBlock
 api-version: 1.19
 
 commands:
+
+  # TODO: more descriptive command descriptions
+
   image:
     description: Hello World!
     usage: /image
+    permission: op
+
+  url:
+    description: Hello World! (2)
+    usage: /url
     permission: op
