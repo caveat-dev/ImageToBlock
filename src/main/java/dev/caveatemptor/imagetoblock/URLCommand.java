@@ -29,7 +29,7 @@ public class URLCommand implements CommandExecutor {
             url = new URL(args[0]);
         } catch (MalformedURLException ignored) {
             url = null;
-            return sendMessageAndReturn(sender, "Invalid URL", RED);
+            return sendMessageAndReturn(sender, "Not a URL", RED);
         }
 
         // try url, return if image isn't gettable
@@ -40,6 +40,6 @@ public class URLCommand implements CommandExecutor {
             return sendMessageAndReturn(sender, "Cannot get image, invalid URL", RED);
         }
 
-        return sendMessageAndReturn(sender, "Image set!", GREEN);
+        return sendMessageAndReturn(sender, "Image URL set!", GREEN);
     }
 }

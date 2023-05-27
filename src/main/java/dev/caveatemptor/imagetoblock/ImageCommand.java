@@ -1,6 +1,5 @@
 package dev.caveatemptor.imagetoblock;
 
-import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -25,11 +24,13 @@ public class ImageCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
 
-        // TODO: image (here)
-        // TODO: replace sendMessage with sendErrorMessage where appropriate
+        // TODO: fix scaling
+        // TODO: Remove image layering
+        // TODO: Change to use enum instead of config for block colors
+
         // TODO: log all the images and where in the world they are
         // TODO: Save URL to config to save across restarts
-        // TODO: fix scaling
+        // TODO: get image size limits from command and save to config
 
         if (args.length > 3)
             return sendMessageAndReturn(sender, "Too many arguments!");
@@ -47,7 +48,7 @@ public class ImageCommand implements CommandExecutor {
 
         if (args.length == 0) {
             if (player == null)
-                return sendMessageAndReturn(sender, "Must be in-game to do this", RED);
+                return sendMessageAndReturn(sender, "Must be in-game to do this. Please re-run and specify coords", RED);
 
             originX = player.getLocation().getBlockX();
             originY = player.getLocation().getBlockY();
@@ -65,50 +66,39 @@ public class ImageCommand implements CommandExecutor {
         else
             return sendMessageAndReturn(sender, "Invalid arguments", RED);
 
-        // scale image to fit within 256x256 pixels
-        sendMessage(sender, "Scaling to fit within 256x256 pixels...");
+        sendMessage(sender, "Scaling to fit within limits...");
 
-        int heightDifference = img.getHeight() - 256;
-        int widthDifference = img.getWidth() - 256;
+        int widthLimit = 256;
+        if (img.getWidth() > widthLimit) {
+            float scale = ((float) widthLimit) / img.getWidth();
+            int newHeight = (int) (img.getHeight() * scale);
 
-        if (heightDifference > 0) {
-            double scalePercent = (double) (img.getHeight() - heightDifference) / img.getHeight();
-
-            int newWidth = (int) (img.getWidth() * scalePercent);
-            int newHeight = (int) (img.getHeight() * scalePercent);
-
-            scaleImage(img, newWidth, newHeight);
+            scaleImage(widthLimit, newHeight);
         }
-        if (widthDifference > 0) {
-            double scalePercent = (double) (img.getWidth() - widthDifference) / img.getWidth();
 
-            int newWidth = (int) (img.getWidth() * scalePercent);
-            int newHeight = (int) (img.getWidth() * scalePercent);
+        int heightLimit = 256;
+        if (img.getHeight() > heightLimit) {
+            float scale = ((float) heightLimit) / img.getHeight();
+            int newWidth = (int) (img.getWidth() * scale);
 
-            scaleImage(img, newWidth, newHeight);
+            scaleImage(newWidth, heightLimit);
         }
 
         sendMessage(sender, "Done!");
 
-        // check if image fits within the world build height limit
-        sendMessage(sender, "Scaling to fit within world build height...");
+        sendMessage(sender, "Scaling to fit with world height limit...");
 
-        int maxHeight = server.getWorlds().get(0).getMaxHeight() - originY;
-        int height = img.getHeight() + originY;
+        int maxHeight = server.getWorlds().get(0).getMaxHeight();
+        if (img.getHeight() + originY > maxHeight) {
+            int blocksOver = img.getHeight() + originY - maxHeight;
+            int newHeight = img.getHeight() - blocksOver;
 
-        int blocksOverbuildHeight = height - maxHeight;
+            float scale = ((float) newHeight) / img.getHeight();
 
-        // scale image to fit within world build height limit
-        if (blocksOverbuildHeight > 0) {
-            double scalePercent = (double) maxHeight / height;
+            int newWidth = (int) (img.getWidth() * scale);
 
-            int newWidth = (int) (img.getWidth() * scalePercent);
-            int newHeight = (int) (height * scalePercent);
-
-            img = scaleImage(img, newWidth, newHeight);
+            scaleImage(newWidth, newHeight);
         }
-
-        sendMessage(sender, "Done!");
 
         sendMessage(sender, "Splitting image into layers...");
         // split image into layers
@@ -151,7 +141,7 @@ public class ImageCommand implements CommandExecutor {
     }
 
 
-    private BufferedImage scaleImage(BufferedImage img, int newWidth, int newHeight) {
+    private void scaleImage(int newWidth, int newHeight) {
         BufferedImage scaledImg = new BufferedImage(newWidth, newHeight, BufferedImage.TRANSLUCENT);
 
         Graphics2D g2 = scaledImg.createGraphics();
@@ -159,7 +149,7 @@ public class ImageCommand implements CommandExecutor {
         g2.drawImage(img, 0, 0, newWidth, newHeight, null);
         g2.dispose();
 
-        return scaledImg;
+        img = scaledImg;
     }
 
 
