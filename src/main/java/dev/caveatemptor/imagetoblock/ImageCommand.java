@@ -7,8 +7,10 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.*;
 import java.util.List;
 
@@ -33,8 +35,14 @@ public class ImageCommand implements CommandExecutor {
 
         if (args.length > 4)
             return sendMessageAndReturn(sender, "Too many arguments!");
-        if (img == null)
-            return sendMessageAndReturn(sender, "No image. Please use a valid URL", RED);
+
+        // get the image again every time to reset any scaling done to it
+        try {
+            img = ImageIO.read(url);
+        } catch (IOException e) {
+            url = null;
+            return sendMessageAndReturn(sender, "Cannot get image, invalid URL", RED);
+        }
 
         Player player = null;
         try {
@@ -66,7 +74,6 @@ public class ImageCommand implements CommandExecutor {
             return sendMessageAndReturn(sender, "Invalid arguments", RED);
 
         sendMessage(sender, "Scaling to fit within limits...");
-
         if (img.getWidth() > widthLimit) {
             float scale = ((float) widthLimit) / img.getWidth();
             int newHeight = (int) (img.getHeight() * scale);
@@ -80,11 +87,9 @@ public class ImageCommand implements CommandExecutor {
 
             scaleImage(newWidth, heightLimit);
         }
-
         sendMessage(sender, "Done!");
 
         sendMessage(sender, "Scaling to fit with world height limit...");
-
         int maxHeight = server.getWorlds().get(0).getMaxHeight();
         if (img.getHeight() + originY > maxHeight) {
             int blocksOver = img.getHeight() + originY - maxHeight;
@@ -96,13 +101,6 @@ public class ImageCommand implements CommandExecutor {
 
             scaleImage(newWidth, newHeight);
         }
-
-        sendMessage(sender, "Splitting image into layers...");
-        // split image into layers
-        List<BufferedImage> imgLayers = new ArrayList<>();
-        for (int y = img.getHeight() - 1; y >= 0; y--) {
-            imgLayers.add(img.getSubimage(0, y, img.getWidth() - 1, 1));
-        }
         sendMessage(sender, "Done!");
 
         // make a barrier block layer on the bottom to stop physics blocks from falling
@@ -112,12 +110,8 @@ public class ImageCommand implements CommandExecutor {
         }
         sendMessage(sender, "Done!");
 
-        sendMessage(sender, "Placing layers...");
-
-        //noinspection CodeBlock2Expr
-        imgLayers.forEach((layer) -> {
-            buildLayer(layer, originX, originY + imgLayers.indexOf(layer), originZ);
-        });
+        sendMessage(sender, "Building image...");
+        buildImage(originX, originY, originZ);
         sendMessage(sender, "Done!");
 
         return true;
@@ -138,6 +132,26 @@ public class ImageCommand implements CommandExecutor {
     }
 
 
+    private void buildImage(int originX, int originY, int originZ) {
+        int imgX = img.getWidth() - 1;
+        int imgY = img.getHeight() - 1;
+
+        for (int y = originY; y < originY + img.getHeight(); y++) {
+            for (int x = originX; x < originX + img.getWidth(); x++) {
+                Color pixelColor = new Color(img.getRGB(imgX, imgY));
+
+                Material blockToPlace = getBlockClosestInColor(pixelColor);
+
+                server.getWorlds().get(0).getBlockAt(x, y, originZ).setType(blockToPlace);
+
+                imgX--;
+            }
+            imgX = img.getWidth() - 1;
+            imgY--;
+        }
+    }
+
+
     private void scaleImage(int newWidth, int newHeight) {
         BufferedImage scaledImg = new BufferedImage(newWidth, newHeight, BufferedImage.TRANSLUCENT);
 
@@ -154,7 +168,7 @@ public class ImageCommand implements CommandExecutor {
 
         Map<String, Object> blockNames = requireNonNull(config.getConfigurationSection("blocks")).getValues(false);
 
-        float lowestAverageDifference = 999;
+        float lowestAverageDifference = 999; // TODO: find a better way to do this
         Material closestBlockInColor = null;
 
         for (Material material : Material.values()) {
@@ -195,6 +209,7 @@ public class ImageCommand implements CommandExecutor {
             return false;
 
         ImageCommand.widthLimit = widthLimit;
+        instance.saveConfig();
         return true;
     }
 
@@ -203,6 +218,7 @@ public class ImageCommand implements CommandExecutor {
             return false;
 
         ImageCommand.heightLimit = heightLimit;
+        instance.saveConfig();
         return true;
     }
 
