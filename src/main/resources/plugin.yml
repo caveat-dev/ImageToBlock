@@ -16,3 +16,8 @@ commands:
     description: Hello World! (2)
     usage: /url
     permission: op
+
+  sizelimit:
+    description: Hello World! (3)
+    usage: /sizelimits
+    permission: op

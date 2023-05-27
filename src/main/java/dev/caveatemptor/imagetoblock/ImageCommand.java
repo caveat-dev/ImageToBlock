@@ -4,7 +4,6 @@ import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
@@ -19,16 +18,18 @@ import static java.lang.Integer.parseInt;
 import static java.lang.Math.abs;
 import static net.kyori.adventure.text.format.NamedTextColor.*;
 import static org.bukkit.Material.*;
+import static java.util.Objects.requireNonNull;
 
 public class ImageCommand implements CommandExecutor {
+
+    private static int widthLimit;
+    private static int heightLimit;
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
 
         // TODO: Remove image layering
         // TODO: Change to use enum instead of config for block colors
-
-        // TODO: get image size limits from command and save to config
 
         if (args.length > 4)
             return sendMessageAndReturn(sender, "Too many arguments!");
@@ -66,7 +67,6 @@ public class ImageCommand implements CommandExecutor {
 
         sendMessage(sender, "Scaling to fit within limits...");
 
-        int widthLimit = 128;
         if (img.getWidth() > widthLimit) {
             float scale = ((float) widthLimit) / img.getWidth();
             int newHeight = (int) (img.getHeight() * scale);
@@ -74,7 +74,6 @@ public class ImageCommand implements CommandExecutor {
             scaleImage(widthLimit, newHeight);
         }
 
-        int heightLimit = 128;
         if (img.getHeight() > heightLimit) {
             float scale = ((float) heightLimit) / img.getHeight();
             int newWidth = (int) (img.getWidth() * scale);
@@ -153,7 +152,7 @@ public class ImageCommand implements CommandExecutor {
 
     private Material getBlockClosestInColor(Color pixelColor) {
 
-        Map<String, Object> blockNames = Objects.requireNonNull(config.getConfigurationSection("blocks")).getValues(false);
+        Map<String, Object> blockNames = requireNonNull(config.getConfigurationSection("blocks")).getValues(false);
 
         float lowestAverageDifference = 999;
         Material closestBlockInColor = null;
@@ -166,7 +165,7 @@ public class ImageCommand implements CommandExecutor {
 
             Map<String, Object> blockColors;
             try {
-                blockColors = Objects.requireNonNull(config.getConfigurationSection("blocks." + materialName)).getValues(false);
+                blockColors = requireNonNull(config.getConfigurationSection("blocks." + materialName)).getValues(false);
             } catch (IllegalArgumentException e) {
                 System.out.println("BLOCK NOT FOUND: " + materialName);
                 continue;
@@ -188,5 +187,30 @@ public class ImageCommand implements CommandExecutor {
             closestBlockInColor = AIR; // TODO: Fix this
 
         return closestBlockInColor;
+    }
+
+
+    public static boolean setWidthLimit(int widthLimit) {
+        if (widthLimit < 32)
+            return false;
+
+        ImageCommand.widthLimit = widthLimit;
+        return true;
+    }
+
+    public static boolean setHeightLimit(int heightLimit) {
+        if (widthLimit < 32)
+            return false;
+
+        ImageCommand.heightLimit = heightLimit;
+        return true;
+    }
+
+    public static int getWidthLimit() {
+        return widthLimit;
+    }
+
+    public static int getHeightLimit() {
+        return heightLimit;
     }
 }

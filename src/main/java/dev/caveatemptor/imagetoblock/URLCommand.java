@@ -9,12 +9,9 @@ import javax.imageio.ImageIO;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
-import java.util.Scanner;
 
 import static dev.caveatemptor.imagetoblock.ImageToBlock.*;
 import static dev.caveatemptor.imagetoblock.Message.*;
-import static java.nio.charset.StandardCharsets.UTF_16;
 import static net.kyori.adventure.text.format.NamedTextColor.*;
 
 public class URLCommand implements CommandExecutor {
@@ -46,6 +43,7 @@ public class URLCommand implements CommandExecutor {
         // set the url in the config
         config.set("url", url.toString());
         plugin.saveConfig();
+        config = instance.getConfig();
 
         return sendMessageAndReturn(sender, "Image URL set!", GREEN);
     }

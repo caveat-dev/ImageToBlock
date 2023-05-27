@@ -3,17 +3,14 @@ package dev.caveatemptor.imagetoblock;
 import org.bukkit.Server;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.jetbrains.annotations.NotNull;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Map;
-import java.util.Objects;
 
-import static dev.caveatemptor.imagetoblock.Message.sendMessageAndReturn;
-import static net.kyori.adventure.text.format.NamedTextColor.RED;
+import static dev.caveatemptor.imagetoblock.ImageCommand.*;
+import static java.util.Objects.requireNonNull;
 
 public final class ImageToBlock extends JavaPlugin {
     public static ImageToBlock instance;
@@ -31,8 +28,9 @@ public final class ImageToBlock extends JavaPlugin {
         config = instance.getConfig();
         server = instance.getServer();
 
+        // get url from config
         try {
-            url = new URL((String) Objects.requireNonNull(config.get("url")));
+            url = new URL((String) requireNonNull(config.get("url")));
 
             // try url, set back to null if unusable
             try {
@@ -42,10 +40,13 @@ public final class ImageToBlock extends JavaPlugin {
             }
         } catch (Exception ignored) {}
 
-        System.out.println(url);
+        // get size limits from config
+        setWidthLimit((int) requireNonNull(config.get("widthLimit")));
+        setHeightLimit((int) requireNonNull(config.get("heightLimit")));
 
-        Objects.requireNonNull(this.getCommand("image")).setExecutor(new ImageCommand());
-        Objects.requireNonNull(this.getCommand("url")).setExecutor(new URLCommand());
+        requireNonNull(this.getCommand("image")).setExecutor(new ImageCommand());
+        requireNonNull(this.getCommand("url")).setExecutor(new URLCommand());
+        requireNonNull(this.getCommand("sizelimit")).setExecutor(new SizeLimitCommand());
 
         this.saveDefaultConfig();
     }

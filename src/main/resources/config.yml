@@ -940,4 +940,10 @@ blocks:
     g: 198
     b: 39
 
-url: !!java.net.URL {}
+url: []
+
+defaultSizeLimit: 256
+
+widthLimit: 256
+
+heightLimit: 256
