@@ -12,7 +12,6 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.*;
-import java.util.List;
 
 import static dev.caveatemptor.imagetoblock.Message.*;
 import static dev.caveatemptor.imagetoblock.ImageToBlock.*;
@@ -30,7 +29,6 @@ public class ImageCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
 
-        // TODO: Remove image layering
         // TODO: Change to use enum instead of config for block colors
 
         if (args.length > 4)
@@ -115,20 +113,6 @@ public class ImageCommand implements CommandExecutor {
         sendMessage(sender, "Done!");
 
         return true;
-    }
-
-
-    private void buildLayer(BufferedImage img, int originX, int originY, int originZ) {
-        int imgX = img.getWidth() - 1;
-        for (int x = originX; x < originX + img.getWidth(); x++) {
-            Color pixelColor = new Color(img.getRGB(imgX, 0));
-
-            Material blockToPlace = getBlockClosestInColor(pixelColor);
-
-            server.getWorlds().get(0).getBlockAt(x, originY, originZ).setType(blockToPlace);
-
-            imgX--;
-        }
     }
 
 
