@@ -4,6 +4,7 @@ import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
@@ -24,15 +25,12 @@ public class ImageCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
 
-        // TODO: fix scaling
         // TODO: Remove image layering
         // TODO: Change to use enum instead of config for block colors
 
-        // TODO: log all the images and where in the world they are
-        // TODO: Save URL to config to save across restarts
         // TODO: get image size limits from command and save to config
 
-        if (args.length > 3)
+        if (args.length > 4)
             return sendMessageAndReturn(sender, "Too many arguments!");
         if (img == null)
             return sendMessageAndReturn(sender, "No image. Please use a valid URL", RED);
@@ -46,7 +44,7 @@ public class ImageCommand implements CommandExecutor {
         int originY;
         int originZ;
 
-        if (args.length == 0) {
+        if (args.length <= 1) {
             if (player == null)
                 return sendMessageAndReturn(sender, "Must be in-game to do this. Please re-run and specify coords", RED);
 
@@ -54,7 +52,7 @@ public class ImageCommand implements CommandExecutor {
             originY = player.getLocation().getBlockY();
             originZ = player.getLocation().getBlockZ();
         }
-        else if (args.length == 3) {
+        else if (args.length == 3 || args.length == 4) {
             try {
                 originX = parseInt(args[0]);
                 originY = parseInt(args[1]);
@@ -68,7 +66,7 @@ public class ImageCommand implements CommandExecutor {
 
         sendMessage(sender, "Scaling to fit within limits...");
 
-        int widthLimit = 256;
+        int widthLimit = 128;
         if (img.getWidth() > widthLimit) {
             float scale = ((float) widthLimit) / img.getWidth();
             int newHeight = (int) (img.getHeight() * scale);
@@ -76,7 +74,7 @@ public class ImageCommand implements CommandExecutor {
             scaleImage(widthLimit, newHeight);
         }
 
-        int heightLimit = 256;
+        int heightLimit = 128;
         if (img.getHeight() > heightLimit) {
             float scale = ((float) heightLimit) / img.getHeight();
             int newWidth = (int) (img.getWidth() * scale);
@@ -155,8 +153,6 @@ public class ImageCommand implements CommandExecutor {
 
     private Material getBlockClosestInColor(Color pixelColor) {
 
-        // TODO: rewrite to use enums instead of a config
-
         Map<String, Object> blockNames = Objects.requireNonNull(config.getConfigurationSection("blocks")).getValues(false);
 
         float lowestAverageDifference = 999;
@@ -187,6 +183,9 @@ public class ImageCommand implements CommandExecutor {
                 lowestAverageDifference = averageDifference;
             }
         }
+
+        if (closestBlockInColor == null) // This really shouldn't be an issue, but it is. Short term solution
+            closestBlockInColor = AIR; // TODO: Fix this
 
         return closestBlockInColor;
     }

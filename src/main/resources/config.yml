@@ -939,3 +939,5 @@ blocks:
     r: 248
     g: 198
     b: 39
+
+url: !!java.net.URL {}
