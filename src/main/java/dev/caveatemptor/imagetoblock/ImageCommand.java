@@ -1,17 +1,17 @@
 package dev.caveatemptor.imagetoblock;
 
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
-import java.util.Objects;
 
 import static dev.caveatemptor.imagetoblock.Message.*;
 import static dev.caveatemptor.imagetoblock.ImageToBlock.*;
@@ -26,31 +26,44 @@ public class ImageCommand implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
 
         // TODO: image (here)
-        // TODO: fix URL shit and add url command
         // TODO: replace sendMessage with sendErrorMessage where appropriate
+        // TODO: log all the images and where in the world they are
+        // TODO: Save URL to config to save across restarts
+        // TODO: fix scaling
 
-        if (args.length < 3)
-            return sendMessageAndReturn(sender, "Please specify valid coordinates", RED);
+        if (args.length > 3)
+            return sendMessageAndReturn(sender, "Too many arguments!");
         if (img == null)
             return sendMessageAndReturn(sender, "No image. Please use a valid URL", RED);
+
+        Player player = null;
+        try {
+            player = (Player) sender;
+        } catch (Exception ignored) {}
 
         int originX;
         int originY;
         int originZ;
-        try {
-            originX = parseInt(args[0]);
-            originY = parseInt(args[1]);
-            originZ = parseInt(args[2]);
-        } catch (Exception ignored) {
-            return sendMessageAndReturn(sender, "Invalid coords", RED);
-        }
 
-        if (server.getWorlds().get(0).getMaxHeight() - 5 <= originY) {
-            sendMessage(sender, "Too close to build limit!");
-            return true;
-        }
+        if (args.length == 0) {
+            if (player == null)
+                return sendMessageAndReturn(sender, "Must be in-game to do this", RED);
 
-        // TODO: fix scaling
+            originX = player.getLocation().getBlockX();
+            originY = player.getLocation().getBlockY();
+            originZ = player.getLocation().getBlockZ();
+        }
+        else if (args.length == 3) {
+            try {
+                originX = parseInt(args[0]);
+                originY = parseInt(args[1]);
+                originZ = parseInt(args[2]);
+            } catch (Exception ignored) {
+                return sendMessageAndReturn(sender, "Invalid coords", RED);
+            }
+        }
+        else
+            return sendMessageAndReturn(sender, "Invalid arguments", RED);
 
         // scale image to fit within 256x256 pixels
         sendMessage(sender, "Scaling to fit within 256x256 pixels...");
