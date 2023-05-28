@@ -150,6 +150,8 @@ public class ImageCommand implements CommandExecutor {
 
     private Material getBlockClosestInColor(Color pixelColor) {
 
+        // TODO: Optimize block picker by returning once the color difference is within a certain threshold instead of continuing to loop through and check
+
         Map<String, Object> blockNames = requireNonNull(config.getConfigurationSection("blocks")).getValues(false);
 
         float lowestAverageDifference = 99999; // TODO: find a better way to do this
