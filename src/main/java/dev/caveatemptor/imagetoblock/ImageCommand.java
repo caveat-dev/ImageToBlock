@@ -23,13 +23,12 @@ import static java.util.Objects.requireNonNull;
 
 public class ImageCommand implements CommandExecutor {
 
-    private static int widthLimit;
-    private static int heightLimit;
-
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
 
-        // TODO: Change to use enum instead of config for block colors
+        // TODO: Change direction of image depending on where the player is facing
+        // TODO: stop server from overloading
+        // TODO: switch to fabric
 
         if (args.length > 4)
             return sendMessageAndReturn(sender, "Too many arguments!");
@@ -72,18 +71,18 @@ public class ImageCommand implements CommandExecutor {
             return sendMessageAndReturn(sender, "Invalid arguments", RED);
 
         sendMessage(sender, "Scaling to fit within limits...");
-        if (img.getWidth() > widthLimit) {
-            float scale = ((float) widthLimit) / img.getWidth();
+        if (img.getWidth() > getWidthLimit()) {
+            float scale = ((float) getWidthLimit()) / img.getWidth();
             int newHeight = (int) (img.getHeight() * scale);
 
-            scaleImage(widthLimit, newHeight);
+            scaleImage(getWidthLimit(), newHeight);
         }
 
-        if (img.getHeight() > heightLimit) {
-            float scale = ((float) heightLimit) / img.getHeight();
+        if (img.getHeight() > getHeightLimit()) {
+            float scale = ((float) getHeightLimit()) / img.getHeight();
             int newWidth = (int) (img.getWidth() * scale);
 
-            scaleImage(newWidth, heightLimit);
+            scaleImage(newWidth, getHeightLimit());
         }
         sendMessage(sender, "Done!");
 
@@ -176,40 +175,17 @@ public class ImageCommand implements CommandExecutor {
 
             if (averageDifference < lowestAverageDifference) {
                 closestBlockInColor = material;
+
                 lowestAverageDifference = averageDifference;
             }
+
+            if (lowestAverageDifference <= getColorTolerance())
+                break;
         }
 
         if (closestBlockInColor == null) // This really shouldn't be an issue, but it's good to have this just in case
             closestBlockInColor = AIR; // if the space is air it should be pretty clear something went wrong
 
         return closestBlockInColor;
-    }
-
-
-    public static boolean setWidthLimit(int widthLimit) {
-        if (widthLimit < 32)
-            return false;
-
-        ImageCommand.widthLimit = widthLimit;
-        instance.saveConfig();
-        return true;
-    }
-
-    public static boolean setHeightLimit(int heightLimit) {
-        if (widthLimit < 32)
-            return false;
-
-        ImageCommand.heightLimit = heightLimit;
-        instance.saveConfig();
-        return true;
-    }
-
-    public static int getWidthLimit() {
-        return widthLimit;
-    }
-
-    public static int getHeightLimit() {
-        return heightLimit;
     }
 }

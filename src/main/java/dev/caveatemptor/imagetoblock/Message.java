@@ -21,5 +21,5 @@ public class Message {
     public static boolean sendMessageAndReturn(CommandSender sender, String message, TextColor color) {
         sender.sendMessage(Component.text(message).color(color));
         return true;
-    }
+    } // TODO: remove redundant functions
 }

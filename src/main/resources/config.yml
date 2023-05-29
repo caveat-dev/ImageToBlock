@@ -947,3 +947,6 @@ defaultSizeLimit: 256
 widthLimit: 256
 
 heightLimit: 256
+
+# higher values will increase speed at the cost of color accuracy
+colorTolerance: 20
