@@ -5,9 +5,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
 
-import static dev.caveatemptor.imagetoblock.ImageToBlock.config;
+import static dev.caveatemptor.imagetoblock.ImageToBlock.*;
 import static dev.caveatemptor.imagetoblock.Message.sendMessage;
-import static dev.caveatemptor.imagetoblock.ImageCommand.*;
 import static dev.caveatemptor.imagetoblock.Message.sendMessageAndReturn;
 import static java.lang.Integer.parseInt;
 import static java.util.Objects.requireNonNull;

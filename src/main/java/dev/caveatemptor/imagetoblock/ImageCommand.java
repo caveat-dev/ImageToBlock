@@ -4,6 +4,7 @@ import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.MemorySection;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
@@ -11,25 +12,27 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.util.*;
+import java.util.Map;
 
-import static dev.caveatemptor.imagetoblock.Message.*;
 import static dev.caveatemptor.imagetoblock.ImageToBlock.*;
+import static dev.caveatemptor.imagetoblock.Message.sendMessage;
+import static dev.caveatemptor.imagetoblock.Message.sendMessageAndReturn;
 import static java.lang.Integer.parseInt;
 import static java.lang.Math.abs;
-import static net.kyori.adventure.text.format.NamedTextColor.*;
-import static org.bukkit.Material.*;
 import static java.util.Objects.requireNonNull;
+import static net.kyori.adventure.text.format.NamedTextColor.BLUE;
+import static net.kyori.adventure.text.format.NamedTextColor.RED;
+import static org.bukkit.Material.BARRIER;
+import static org.bukkit.Material.STONE;
 
 public class ImageCommand implements CommandExecutor {
-
-    private static int widthLimit;
-    private static int heightLimit;
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
 
-        // TODO: Change to use enum instead of config for block colors
+        // TODO: Change direction of image depending on where the player is facing
+        // TODO: stop server from overloading
+        // TODO: switch to fabric
 
         if (args.length > 4)
             return sendMessageAndReturn(sender, "Too many arguments!");
@@ -41,6 +44,8 @@ public class ImageCommand implements CommandExecutor {
             url = null;
             return sendMessageAndReturn(sender, "Cannot get image, invalid URL", RED);
         }
+        if (img == null)
+            return sendMessageAndReturn(sender, "Cannot get image, invalid URL", RED);
 
         Player player = null;
         try {
@@ -72,18 +77,18 @@ public class ImageCommand implements CommandExecutor {
             return sendMessageAndReturn(sender, "Invalid arguments", RED);
 
         sendMessage(sender, "Scaling to fit within limits...");
-        if (img.getWidth() > widthLimit) {
-            float scale = ((float) widthLimit) / img.getWidth();
+        if (img.getWidth() > getWidthLimit()) {
+            float scale = ((float) getWidthLimit()) / img.getWidth();
             int newHeight = (int) (img.getHeight() * scale);
 
-            scaleImage(widthLimit, newHeight);
+            scaleImage(getWidthLimit(), newHeight);
         }
 
-        if (img.getHeight() > heightLimit) {
-            float scale = ((float) heightLimit) / img.getHeight();
+        if (img.getHeight() > getHeightLimit()) {
+            float scale = ((float) getHeightLimit()) / img.getHeight();
             int newWidth = (int) (img.getWidth() * scale);
 
-            scaleImage(newWidth, heightLimit);
+            scaleImage(newWidth, getHeightLimit());
         }
         sendMessage(sender, "Done!");
 
@@ -150,68 +155,28 @@ public class ImageCommand implements CommandExecutor {
 
     private Material getBlockClosestInColor(Color pixelColor) {
 
-        // TODO: Optimize block picker by returning once the color difference is within a certain threshold instead of continuing to loop through and check
+        Map<String, Object> blocks = requireNonNull(config.getConfigurationSection("blocks")).getValues(false);
 
-        Map<String, Object> blockNames = requireNonNull(config.getConfigurationSection("blocks")).getValues(false);
-
-        float lowestAverageDifference = 99999; // TODO: find a better way to do this
+        float lowestAverageDifference = 99999;
         Material closestBlockInColor = null;
 
-        for (Material material : Material.values()) {
+        for (Object block : blocks.values()) {
+            MemorySection blockColors = (MemorySection) block;
 
-            String materialName = material.key().toString().replace("minecraft:", "").toUpperCase();
-            if (!blockNames.containsKey(materialName))
-                continue;
-
-            Map<String, Object> blockColors;
-            try {
-                blockColors = requireNonNull(config.getConfigurationSection("blocks." + materialName)).getValues(false);
-            } catch (IllegalArgumentException e) {
-                continue;
-            }
-
-            int redDifference = abs((int) blockColors.get("r") - pixelColor.getRed());
-            int greenDifference = abs((int) blockColors.get("g") - pixelColor.getGreen());
-            int blueDifference = abs((int) blockColors.get("b") - pixelColor.getBlue());
+            int redDifference = abs((int) requireNonNull(blockColors.get("r")) - pixelColor.getRed());
+            int greenDifference = abs((int) requireNonNull(blockColors.get("g")) - pixelColor.getGreen());
+            int blueDifference = abs((int) requireNonNull(blockColors.get("b")) - pixelColor.getBlue());
 
             float averageDifference = (redDifference + greenDifference + blueDifference) / 3.0f;
 
             if (averageDifference < lowestAverageDifference) {
-                closestBlockInColor = material;
+                closestBlockInColor = Material.getMaterial(blockColors.getName());
                 lowestAverageDifference = averageDifference;
             }
+            if (lowestAverageDifference <= getColorTolerance())
+                break;
         }
 
-        if (closestBlockInColor == null) // This really shouldn't be an issue, but it's good to have this just in case
-            closestBlockInColor = AIR; // if the space is air it should be pretty clear something went wrong
-
         return closestBlockInColor;
-    }
-
-
-    public static boolean setWidthLimit(int widthLimit) {
-        if (widthLimit < 32)
-            return false;
-
-        ImageCommand.widthLimit = widthLimit;
-        instance.saveConfig();
-        return true;
-    }
-
-    public static boolean setHeightLimit(int heightLimit) {
-        if (widthLimit < 32)
-            return false;
-
-        ImageCommand.heightLimit = heightLimit;
-        instance.saveConfig();
-        return true;
-    }
-
-    public static int getWidthLimit() {
-        return widthLimit;
-    }
-
-    public static int getHeightLimit() {
-        return heightLimit;
     }
 }
