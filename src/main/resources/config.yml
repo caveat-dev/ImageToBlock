@@ -942,11 +942,11 @@ blocks:
 
 url: []
 
-defaultSizeLimit: 256
+defaultSizeLimit: 320
 
-widthLimit: 256
+widthLimit: 320
 
-heightLimit: 256
+heightLimit: 320
 
 # higher values will increase speed at the cost of color accuracy
-colorTolerance: 20
+colorTolerance: 10
